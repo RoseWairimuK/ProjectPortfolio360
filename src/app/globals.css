@@ -1,8 +1,42 @@
 @import "tailwindcss";
 
+/*
+ * Portfolio360 — Global Styles
+ *
+ * Brand palette: Forest greens + warm oranges on a dark background.
+ * Alert system uses standard RAG: Red (critical), Amber (watch), Green (healthy).
+ *
+ * Green palette (from dark to light):
+ *   #1E3A1E  — deep forest (sidebar bg)
+ *   #2B4D2F  — dark green (card accents)
+ *   #3D5C3D  — medium green (borders, subtle)
+ *   #5D7A3E  — olive green (secondary)
+ *   #7D9A3E  — leaf green (charts, fills)
+ *   #A3B84C  — yellow-green (highlights)
+ *   #D4E87C  — light lime (sparklines, gentle fills)
+ *
+ * Orange palette:
+ *   #C47A1A  — deep amber-orange (accent, hover)
+ *   #E8922D  — warm orange (primary accent)
+ *   #F5A623  — bright orange (CTAs, KPI highlights)
+ *   #F0CE4E  — gold-yellow (secondary accent)
+ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0c120c;
+  --foreground: #e2e8e0;
+  --card-bg: #111a14;
+  --card-border: #1e3a1e;
+  --accent: #E8922D;
+  --accent-hover: #F5A623;
+  --accent-muted: #3D2B10;
+  --green-primary: #5D7A3E;
+  --green-light: #A3B84C;
+  --green-dark: #2B4D2F;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --muted: #7a8a6e;
 }
 
 @theme inline {
@@ -12,15 +46,68 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111a14;
+}
+::-webkit-scrollbar-thumb {
+  background: #3D5C3D;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5D7A3E;
+}
+
+/* Card component base */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+/* KPI card hover effect */
+.card-hover {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  border-color: #3D5C3D;
+  box-shadow: 0 0 20px rgba(232, 146, 45, 0.06);
+}
+
+/* Status badge styles — standard RAG */
+.status-healthy {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.status-watch {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.status-critical {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Recharts overrides for dark theme */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #1e3a1e;
+}
+.recharts-text {
+  fill: #7a8a6e !important;
+  font-size: 11px;
 }
