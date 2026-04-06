@@ -16,7 +16,7 @@ interface CompanyAlertsProps {
 export default function CompanyAlerts({ alerts }: CompanyAlertsProps) {
   return (
     <div className="card">
-      <h3 className="text-sm font-medium text-slate-300 mb-4">
+      <h3 className="text-sm font-medium text-slate-700 mb-4">
         Active Alerts ({alerts.length})
       </h3>
       <div className="space-y-3">

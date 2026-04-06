@@ -6,12 +6,6 @@
  *
  * - Critical: Requires immediate action (red)
  * - Watch: Deteriorating but not yet critical (amber)
- *
- * Each alert links to context: which company, which metric, what the
- * threshold is, and what action to take.
- *
- * This page demonstrates the ability to build decision-support systems,
- * not just dashboards.
  */
 
 import Link from "next/link";
@@ -33,8 +27,8 @@ export default function AlertsPage() {
 
   return (
     <div className="space-y-6">
-      {/* ── Page Header ── */}
-      <div>
+      {/* ── Dark Header Banner ── */}
+      <div className="dark-banner">
         <h1 className="text-2xl font-bold text-white">
           Early Warning & Alerts
         </h1>
@@ -47,23 +41,23 @@ export default function AlertsPage() {
       {/* ── Summary Strip ── */}
       <div className="grid grid-cols-3 gap-4">
         <div className="card">
-          <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">
+          <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">
             Total Active Alerts
           </p>
-          <p className="text-3xl font-bold text-white">{alerts.length}</p>
+          <p className="text-3xl font-bold text-slate-800">{alerts.length}</p>
         </div>
-        <div className="card border-red-400/20">
-          <p className="text-xs text-red-400 uppercase tracking-wider mb-1">
+        <div className="card border-red-200">
+          <p className="text-xs text-red-600 uppercase tracking-wider mb-1">
             Critical
           </p>
-          <p className="text-3xl font-bold text-red-400">{criticalAlerts.length}</p>
+          <p className="text-3xl font-bold text-red-600">{criticalAlerts.length}</p>
           <p className="text-xs text-slate-500 mt-1">Requires immediate action</p>
         </div>
-        <div className="card border-amber-400/20">
-          <p className="text-xs text-amber-400 uppercase tracking-wider mb-1">
+        <div className="card border-amber-200">
+          <p className="text-xs text-amber-600 uppercase tracking-wider mb-1">
             Watch
           </p>
-          <p className="text-3xl font-bold text-amber-400">{watchAlerts.length}</p>
+          <p className="text-3xl font-bold text-amber-600">{watchAlerts.length}</p>
           <p className="text-xs text-slate-500 mt-1">Monitor closely</p>
         </div>
       </div>
@@ -71,7 +65,7 @@ export default function AlertsPage() {
       {/* ── Critical Alerts Section ── */}
       {criticalAlerts.length > 0 && (
         <div>
-          <h2 className="text-lg font-semibold text-red-400 mb-3 flex items-center gap-2">
+          <h2 className="text-lg font-semibold text-red-600 mb-3 flex items-center gap-2">
             <AlertCircle className="w-5 h-5" />
             Critical — Action Required
           </h2>
@@ -86,7 +80,7 @@ export default function AlertsPage() {
       {/* ── Watch Alerts Section ── */}
       {watchAlerts.length > 0 && (
         <div>
-          <h2 className="text-lg font-semibold text-amber-400 mb-3 flex items-center gap-2">
+          <h2 className="text-lg font-semibold text-amber-600 mb-3 flex items-center gap-2">
             <AlertTriangle className="w-5 h-5" />
             Watch — Monitor Closely
           </h2>
@@ -101,7 +95,7 @@ export default function AlertsPage() {
       {/* ── No alerts state ── */}
       {alerts.length === 0 && (
         <div className="card text-center py-12">
-          <p className="text-slate-400">
+          <p className="text-slate-500">
             No active alerts. All portfolio metrics within acceptable thresholds.
           </p>
         </div>
@@ -109,13 +103,13 @@ export default function AlertsPage() {
 
       {/* ── Threshold Reference ── */}
       <div className="card">
-        <h3 className="text-sm font-medium text-slate-300 mb-4">
+        <h3 className="text-sm font-medium text-slate-700 mb-4">
           Alert Threshold Reference
         </h3>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="text-[10px] uppercase tracking-wider text-slate-400 border-b border-slate-700">
+              <tr className="text-[10px] uppercase tracking-wider text-slate-500 border-b border-slate-200">
                 <th className="text-left px-3 py-2 font-medium">Metric</th>
                 <th className="text-right px-3 py-2 font-medium">Watch Level</th>
                 <th className="text-right px-3 py-2 font-medium">Critical Level</th>
@@ -133,12 +127,12 @@ export default function AlertsPage() {
                 { label: "PAR > 30 Days", watch: "> 5%", critical: "> 10%", dir: "Above", desc: "Loan portfolio at risk" },
                 { label: "Collection Rate", watch: "< 90%", critical: "< 85%", dir: "Below", desc: "Revenue actually collected" },
               ].map((row) => (
-                <tr key={row.label} className="border-b border-slate-800/50">
-                  <td className="px-3 py-2 text-slate-300">{row.label}</td>
-                  <td className="px-3 py-2 text-right text-amber-400">{row.watch}</td>
-                  <td className="px-3 py-2 text-right text-red-400">{row.critical}</td>
-                  <td className="px-3 py-2 text-slate-400">{row.dir}</td>
-                  <td className="px-3 py-2 text-slate-500 text-xs">{row.desc}</td>
+                <tr key={row.label} className="border-b border-slate-100">
+                  <td className="px-3 py-2 text-slate-700">{row.label}</td>
+                  <td className="px-3 py-2 text-right text-amber-600">{row.watch}</td>
+                  <td className="px-3 py-2 text-right text-red-600">{row.critical}</td>
+                  <td className="px-3 py-2 text-slate-500">{row.dir}</td>
+                  <td className="px-3 py-2 text-slate-400 text-xs">{row.desc}</td>
                 </tr>
               ))}
             </tbody>
@@ -163,7 +157,7 @@ function AlertCard({ alert }: { alert: ReturnType<typeof generateAlerts>[0] }) {
   return (
     <div
       className={cn(
-        "rounded-lg border px-5 py-4",
+        "card rounded-lg border px-5 py-4",
         severityColor(alert.severity)
       )}
     >
@@ -192,7 +186,7 @@ function AlertCard({ alert }: { alert: ReturnType<typeof generateAlerts>[0] }) {
           </div>
 
           {/* Suggested action */}
-          <div className="mt-3 text-xs opacity-70 bg-black/20 rounded px-3 py-2">
+          <div className="mt-3 text-xs opacity-70 bg-black/5 rounded px-3 py-2">
             <span className="font-medium">Recommended action: </span>
             {alert.suggestedAction}
           </div>

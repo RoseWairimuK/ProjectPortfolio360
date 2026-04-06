@@ -18,15 +18,15 @@ interface CompanyQuarterlyTableProps {
 export default function CompanyQuarterlyTable({ data }: CompanyQuarterlyTableProps) {
   return (
     <div className="card overflow-hidden p-0">
-      <div className="px-5 py-3 border-b border-slate-700">
-        <h3 className="text-sm font-medium text-slate-300">
+      <div className="px-5 py-3 bg-[#162016] border-b border-[#1e3a1e]">
+        <h3 className="text-sm font-medium text-[#c8d8b8]">
           Quarterly Performance Summary
         </h3>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-slate-800/50 text-[10px] uppercase tracking-wider text-slate-400">
+            <tr className="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500">
               <th className="text-left px-4 py-2.5 font-medium">Quarter</th>
               <th className="text-right px-4 py-2.5 font-medium">Revenue</th>
               <th className="text-right px-4 py-2.5 font-medium">QoQ Growth</th>
@@ -53,9 +53,9 @@ export default function CompanyQuarterlyTable({ data }: CompanyQuarterlyTablePro
               return (
                 <tr
                   key={q.period}
-                  className="border-b border-slate-800/50 hover:bg-slate-800/20"
+                  className="border-b border-slate-100 hover:bg-slate-50"
                 >
-                  <td className="px-4 py-2.5 font-medium text-white">
+                  <td className="px-4 py-2.5 font-medium text-slate-800">
                     {q.period}
                   </td>
                   <td className="px-4 py-2.5 text-right text-white">
@@ -75,7 +75,7 @@ export default function CompanyQuarterlyTable({ data }: CompanyQuarterlyTablePro
                       <span className="text-slate-600">—</span>
                     )}
                   </td>
-                  <td className="px-4 py-2.5 text-right text-slate-300">
+                  <td className="px-4 py-2.5 text-right text-slate-600">
                     {formatPercent(q.grossMargin)}
                   </td>
                   <td
@@ -94,11 +94,11 @@ export default function CompanyQuarterlyTable({ data }: CompanyQuarterlyTablePro
                   >
                     {formatPercent(q.ebitdaMargin)}
                   </td>
-                  <td className="px-4 py-2.5 text-right text-slate-300">
+                  <td className="px-4 py-2.5 text-right text-slate-600">
                     {formatCurrency(q.cashBalance, true)}
                   </td>
                   {data.some((d) => d.debtOutstanding > 0) && (
-                    <td className="px-4 py-2.5 text-right text-slate-300">
+                    <td className="px-4 py-2.5 text-right text-slate-600">
                       {q.debtOutstanding > 0
                         ? formatCurrency(q.debtOutstanding, true)
                         : "—"}

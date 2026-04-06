@@ -3,40 +3,31 @@
 /*
  * Portfolio360 — Global Styles
  *
- * Brand palette: Forest greens + warm oranges on a dark background.
+ * Design system: Dark sidebar + header accents, light/white content area.
+ * Inspired by professional dashboard layouts that balance dark branding
+ * with breathable white space for data visualization.
+ *
+ * Brand palette: Forest greens + warm oranges.
  * Alert system uses standard RAG: Red (critical), Amber (watch), Green (healthy).
- *
- * Green palette (from dark to light):
- *   #1E3A1E  — deep forest (sidebar bg)
- *   #2B4D2F  — dark green (card accents)
- *   #3D5C3D  — medium green (borders, subtle)
- *   #5D7A3E  — olive green (secondary)
- *   #7D9A3E  — leaf green (charts, fills)
- *   #A3B84C  — yellow-green (highlights)
- *   #D4E87C  — light lime (sparklines, gentle fills)
- *
- * Orange palette:
- *   #C47A1A  — deep amber-orange (accent, hover)
- *   #E8922D  — warm orange (primary accent)
- *   #F5A623  — bright orange (CTAs, KPI highlights)
- *   #F0CE4E  — gold-yellow (secondary accent)
  */
 
 :root {
-  --background: #0c120c;
-  --foreground: #e2e8e0;
-  --card-bg: #111a14;
-  --card-border: #1e3a1e;
+  --background: #f5f6f8;
+  --foreground: #1e293b;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
   --accent: #E8922D;
   --accent-hover: #F5A623;
-  --accent-muted: #3D2B10;
+  --accent-muted: #fef3e2;
   --green-primary: #5D7A3E;
   --green-light: #A3B84C;
   --green-dark: #2B4D2F;
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
-  --muted: #7a8a6e;
+  --muted: #64748b;
+  --sidebar-bg: #0e1a10;
+  --header-bg: #111a14;
 }
 
 @theme inline {
@@ -58,22 +49,23 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #111a14;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3D5C3D;
+  background: #94a3b8;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #5D7A3E;
+  background: #64748b;
 }
 
-/* Card component base */
+/* Card component base — white cards on light background */
 .card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 0.75rem;
   padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
 }
 
 /* KPI card hover effect */
@@ -81,33 +73,41 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .card-hover:hover {
-  border-color: #3D5C3D;
-  box-shadow: 0 0 20px rgba(232, 146, 45, 0.06);
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(93, 122, 62, 0.08);
+}
+
+/* Dark banner/header section used for page titles */
+.dark-banner {
+  background: #111a14;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Status badge styles — standard RAG */
 .status-healthy {
-  color: #10b981;
+  color: #059669;
   background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.25);
 }
 .status-watch {
-  color: #f59e0b;
+  color: #d97706;
   background: rgba(245, 158, 11, 0.1);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(245, 158, 11, 0.25);
 }
 .status-critical {
-  color: #ef4444;
+  color: #dc2626;
   background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  border: 1px solid rgba(239, 68, 68, 0.25);
 }
 
-/* Recharts overrides for dark theme */
+/* Recharts overrides for light theme */
 .recharts-cartesian-grid-horizontal line,
 .recharts-cartesian-grid-vertical line {
-  stroke: #1e3a1e;
+  stroke: #e2e8f0;
 }
 .recharts-text {
-  fill: #7a8a6e !important;
+  fill: #64748b !important;
   font-size: 11px;
 }

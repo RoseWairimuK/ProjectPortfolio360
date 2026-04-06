@@ -35,8 +35,8 @@ export default function CompanyTable() {
 
   return (
     <div className="card overflow-hidden p-0">
-      {/* Table header */}
-      <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_120px_40px] gap-2 px-5 py-3 bg-[#162016] border-b border-[#1e3a1e] text-[10px] font-medium text-[#7a8a6e] uppercase tracking-wider">
+      {/* Table header — dark green accent strip */}
+      <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_120px_40px] gap-2 px-5 py-3 bg-[#162016] border-b border-[#1e3a1e] text-[10px] font-medium text-[#9aaa8e] uppercase tracking-wider">
         <span>Company</span>
         <span>Status</span>
         <span className="text-right">Revenue (QTR)</span>
@@ -76,16 +76,16 @@ export default function CompanyTable() {
             href={`/company/${company.id}`}
             className={cn(
               "grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_120px_40px] gap-2 px-5 py-3.5",
-              "border-b border-[#1e3a1e]/50 items-center",
-              "hover:bg-[#1e3a1e]/30 transition-colors cursor-pointer group"
+              "border-b border-slate-100 items-center",
+              "hover:bg-slate-50 transition-colors cursor-pointer group"
             )}
           >
             {/* Company name + sector */}
             <div>
-              <p className="text-sm font-medium text-white group-hover:text-[#F5A623] transition-colors">
+              <p className="text-sm font-medium text-slate-800 group-hover:text-[#E8922D] transition-colors">
                 {company.name}
               </p>
-              <p className="text-[11px] text-slate-500">{company.sector}</p>
+              <p className="text-[11px] text-slate-400">{company.sector}</p>
             </div>
 
             {/* Status badge */}
@@ -95,7 +95,7 @@ export default function CompanyTable() {
 
             {/* Revenue (latest quarter) */}
             <div className="text-right">
-              <p className="text-sm font-medium text-white">
+              <p className="text-sm font-medium text-slate-800">
                 {latestQ ? formatCurrency(latestQ.revenue, true) : "—"}
               </p>
               {revGrowth !== null && (
@@ -114,7 +114,7 @@ export default function CompanyTable() {
 
             {/* Gross Margin */}
             <div className="text-right">
-              <p className="text-sm font-medium text-white">
+              <p className="text-sm font-medium text-slate-800">
                 {latest ? formatPercent(latest.grossMargin) : "—"}
               </p>
             </div>
@@ -135,7 +135,7 @@ export default function CompanyTable() {
 
             {/* Cash Balance */}
             <div className="text-right">
-              <p className="text-sm font-medium text-white">
+              <p className="text-sm font-medium text-slate-800">
                 {latest ? formatCurrency(latest.cashBalance, true) : "—"}
               </p>
               {latest && latest.runway < 99 && (

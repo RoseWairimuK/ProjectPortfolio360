@@ -35,31 +35,31 @@ export default function RevenueChart({ data, height = 300 }: RevenueChartProps) 
 
   return (
     <div className="card">
-      <h3 className="text-sm font-medium text-[#c8d8b8] mb-4">
+      <h3 className="text-sm font-medium text-slate-700 mb-4">
         Revenue & EBITDA — Monthly
       </h3>
       <ResponsiveContainer width="100%" height={height}>
         <ComposedChart data={chartData} margin={{ top: 5, right: 10, bottom: 5, left: 10 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e3a1e" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis
             dataKey="period"
-            tick={{ fill: "#7a8a6e", fontSize: 10 }}
+            tick={{ fill: "#64748b", fontSize: 10 }}
             tickLine={false}
             interval={2}
           />
           <YAxis
-            tick={{ fill: "#7a8a6e", fontSize: 10 }}
+            tick={{ fill: "#64748b", fontSize: 10 }}
             tickLine={false}
             axisLine={false}
             tickFormatter={(val) => formatCurrency(val, true)}
           />
           <Tooltip
             contentStyle={{
-              background: "#162016",
-              border: "1px solid #2B4D2F",
+              background: "#1e293b",
+              border: "1px solid #334155",
               borderRadius: "8px",
               fontSize: "12px",
-              color: "#e2e8e0",
+              color: "#e2e8f0",
             }}
             formatter={(val, name) => [
               formatCurrency(Number(val), true),
@@ -67,7 +67,7 @@ export default function RevenueChart({ data, height = 300 }: RevenueChartProps) 
             ]}
           />
           <Legend
-            wrapperStyle={{ fontSize: "11px", color: "#7a8a6e" }}
+            wrapperStyle={{ fontSize: "11px", color: "#64748b" }}
           />
           <Bar
             dataKey="revenue"

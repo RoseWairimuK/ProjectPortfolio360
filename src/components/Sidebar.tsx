@@ -36,12 +36,12 @@ function statusDot(status: string) {
   }
 }
 
-/** Main navigation items */
+/** Main navigation items — About first under Overview */
 const navItems = [
+  { href: "/about", label: "About", icon: Info },
   { href: "/", label: "Command Center", icon: LayoutDashboard },
   { href: "/alerts", label: "Alerts & Warnings", icon: AlertTriangle },
   { href: "/allocation", label: "Portfolio Allocation", icon: PieChart },
-  { href: "/about", label: "About", icon: Info },
 ];
 
 export default function Sidebar() {
@@ -52,17 +52,20 @@ export default function Sidebar() {
     <aside className="fixed left-0 top-0 bottom-0 w-64 bg-[#0e1a10] border-r border-[#1e3a1e] flex flex-col z-50">
       {/* ── Logo / Brand ── */}
       <div className="px-5 py-5 border-b border-[#1e3a1e]">
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-3">
           {/* Logo mark: orange accent on green */}
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#E8922D] to-[#F5A623] flex items-center justify-center text-white font-bold text-xs shadow-lg shadow-orange-900/20">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#E8922D] to-[#F5A623] flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-orange-900/20">
             P3
           </div>
           <div>
-            <h1 className="text-sm font-semibold text-white tracking-tight">
+            <h1 className="text-lg font-semibold text-white tracking-tight">
               Portfolio360
             </h1>
-            <p className="text-[10px] text-[#7a8a6e] uppercase tracking-widest">
+            <p className="text-xs text-[#7a8a6e] uppercase tracking-widest">
               Analytics Platform
+            </p>
+            <p className="text-[11px] text-white mt-0.5">
+              Built by Rosemary Kanyoro
             </p>
           </div>
         </Link>

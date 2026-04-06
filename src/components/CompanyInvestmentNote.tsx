@@ -175,24 +175,24 @@ export default function CompanyInvestmentNote({
 
   return (
     <div className="card">
-      <h3 className="text-sm font-medium text-slate-300 mb-4">
+      <h3 className="text-sm font-medium text-slate-700 mb-4">
         Investment Note — Portfolio Analyst View
       </h3>
 
       {/* Investment thesis */}
       <div className="mb-4">
-        <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">
+        <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-1">
           Investment Thesis
         </p>
-        <p className="text-sm text-slate-300 leading-relaxed">{note.thesis}</p>
+        <p className="text-sm text-slate-600 leading-relaxed">{note.thesis}</p>
       </div>
 
       {/* Current assessment */}
       <div className="mb-4">
-        <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">
+        <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-1">
           Current Assessment
         </p>
-        <p className="text-sm text-slate-300 leading-relaxed">
+        <p className="text-sm text-slate-600 leading-relaxed">
           {note.currentView}
         </p>
       </div>
@@ -200,26 +200,26 @@ export default function CompanyInvestmentNote({
       {/* Two-column: risks and actions */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">
+          <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">
             Key Risks
           </p>
           <ul className="space-y-1.5">
             {note.keyRisks.map((risk, i) => (
-              <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
-                <span className="text-red-400 mt-1">•</span>
+              <li key={i} className="text-sm text-slate-500 flex items-start gap-2">
+                <span className="text-red-500 mt-1">•</span>
                 {risk}
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <p className="text-xs font-medium text-slate-400 uppercase tracking-wider mb-2">
+          <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">
             Recommended Actions
           </p>
           <ul className="space-y-1.5">
             {note.nextActions.map((action, i) => (
-              <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
-                <span className="text-blue-400 mt-1">•</span>
+              <li key={i} className="text-sm text-slate-500 flex items-start gap-2">
+                <span className="text-blue-500 mt-1">•</span>
                 {action}
               </li>
             ))}
@@ -228,7 +228,7 @@ export default function CompanyInvestmentNote({
       </div>
 
       {/* Conviction footer */}
-      <div className="mt-4 pt-4 border-t border-slate-700 flex items-center justify-between">
+      <div className="mt-4 pt-4 border-t border-slate-200 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="text-xs text-slate-500">Conviction Level:</span>
           <span
@@ -243,7 +243,7 @@ export default function CompanyInvestmentNote({
             {company.convictionLevel}
           </span>
         </div>
-        <span className="text-[10px] text-slate-600 italic">
+        <span className="text-[10px] text-slate-400 italic">
           Note: This is simulated analyst commentary for demonstration purposes
         </span>
       </div>

@@ -53,7 +53,7 @@ export default function PortfolioDonut({
 
   return (
     <div className="card">
-      <h3 className="text-sm font-medium text-[#c8d8b8] mb-4">{title}</h3>
+      <h3 className="text-sm font-medium text-slate-700 mb-4">{title}</h3>
       <ResponsiveContainer width="100%" height={height}>
         <PieChart>
           <Pie
@@ -77,11 +77,11 @@ export default function PortfolioDonut({
           </Pie>
           <Tooltip
             contentStyle={{
-              background: "#162016",
-              border: "1px solid #2B4D2F",
+              background: "#1e293b",
+              border: "1px solid #334155",
               borderRadius: "8px",
               fontSize: "12px",
-              color: "#e2e8e0",
+              color: "#e2e8f0",
             }}
             formatter={(val, name) => {
               const v = Number(val);
@@ -94,7 +94,7 @@ export default function PortfolioDonut({
             }}
           />
           <Legend
-            wrapperStyle={{ fontSize: "11px", color: "#7a8a6e" }}
+            wrapperStyle={{ fontSize: "11px", color: "#64748b" }}
             iconType="circle"
             iconSize={8}
           />

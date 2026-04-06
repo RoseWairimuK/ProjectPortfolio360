@@ -48,7 +48,7 @@ export default function MiniChart({
             <Tooltip
               contentStyle={{
                 background: "#1e293b",
-                border: "1px solid #334155",
+                border: "1px solid #475569",
                 borderRadius: "6px",
                 fontSize: "11px",
                 color: "#e2e8f0",

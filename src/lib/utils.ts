@@ -81,15 +81,15 @@ export function statusBg(status: "healthy" | "watch" | "critical"): string {
   }
 }
 
-/** Get severity colour classes for alerts */
+/** Get severity colour classes for alerts — light theme */
 export function severityColor(severity: "critical" | "watch" | "info"): string {
   switch (severity) {
     case "critical":
-      return "text-red-400 bg-red-400/10 border-red-400/30";
+      return "text-red-700 bg-red-50 border-red-200";
     case "watch":
-      return "text-amber-400 bg-amber-400/10 border-amber-400/30";
+      return "text-amber-700 bg-amber-50 border-amber-200";
     case "info":
-      return "text-blue-400 bg-blue-400/10 border-blue-400/30";
+      return "text-blue-700 bg-blue-50 border-blue-200";
   }
 }
 

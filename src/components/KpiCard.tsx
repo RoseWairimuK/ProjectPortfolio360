@@ -42,14 +42,14 @@ export default function KpiCard({
     >
       {/* Header: label + icon */}
       <div className="flex items-start justify-between mb-2">
-        <p className="text-xs font-medium text-[#7a8a6e] uppercase tracking-wider">
+        <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">
           {label}
         </p>
         {icon && <div className="text-[#5D7A3E]">{icon}</div>}
       </div>
 
       {/* Value */}
-      <p className="text-2xl font-semibold text-white tracking-tight">
+      <p className="text-2xl font-semibold text-slate-800 tracking-tight">
         {value}
       </p>
 
@@ -60,10 +60,10 @@ export default function KpiCard({
             className={cn(
               "inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded",
               trend.isGood
-                ? "text-emerald-400 bg-emerald-400/10"
+                ? "text-emerald-600 bg-emerald-50"
                 : trend.direction === "flat"
-                  ? "text-slate-400 bg-slate-400/10"
-                  : "text-red-400 bg-red-400/10"
+                  ? "text-slate-500 bg-slate-100"
+                  : "text-red-600 bg-red-50"
             )}
           >
             {trend.direction === "up" && <TrendingUp className="w-3 h-3" />}

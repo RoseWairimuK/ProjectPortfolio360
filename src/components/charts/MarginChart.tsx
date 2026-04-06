@@ -34,40 +34,40 @@ export default function MarginChart({ data, height = 280 }: MarginChartProps) {
 
   return (
     <div className="card">
-      <h3 className="text-sm font-medium text-[#c8d8b8] mb-4">
+      <h3 className="text-sm font-medium text-slate-700 mb-4">
         Margin Evolution (%)
       </h3>
       <ResponsiveContainer width="100%" height={height}>
         <LineChart data={chartData} margin={{ top: 5, right: 10, bottom: 5, left: 10 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e3a1e" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis
             dataKey="period"
-            tick={{ fill: "#7a8a6e", fontSize: 10 }}
+            tick={{ fill: "#64748b", fontSize: 10 }}
             tickLine={false}
             interval={2}
           />
           <YAxis
-            tick={{ fill: "#7a8a6e", fontSize: 10 }}
+            tick={{ fill: "#64748b", fontSize: 10 }}
             tickLine={false}
             axisLine={false}
             tickFormatter={(val) => `${val}%`}
           />
           {/* Zero reference line for breakeven */}
-          <ReferenceLine y={0} stroke="#3D5C3D" strokeDasharray="3 3" />
+          <ReferenceLine y={0} stroke="#94a3b8" strokeDasharray="3 3" />
           <Tooltip
             contentStyle={{
-              background: "#162016",
-              border: "1px solid #2B4D2F",
+              background: "#1e293b",
+              border: "1px solid #334155",
               borderRadius: "8px",
               fontSize: "12px",
-              color: "#e2e8e0",
+              color: "#e2e8f0",
             }}
             formatter={(val, name) => [
               `${Number(val).toFixed(1)}%`,
               name === "grossMargin" ? "Gross Margin" : "EBITDA Margin",
             ]}
           />
-          <Legend wrapperStyle={{ fontSize: "11px", color: "#7a8a6e" }} />
+          <Legend wrapperStyle={{ fontSize: "11px", color: "#64748b" }} />
           <Line
             type="monotone"
             dataKey="grossMargin"

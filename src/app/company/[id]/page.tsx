@@ -76,17 +76,17 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
 
   return (
     <div className="space-y-6">
-      {/* ── Company Header ── */}
-      <div className="flex items-start justify-between">
+      {/* ── Company Header — dark banner ── */}
+      <div className="dark-banner flex items-start justify-between">
         <div>
           <div className="flex items-center gap-3 mb-2">
             <h1 className="text-2xl font-bold text-white">{company.name}</h1>
             <StatusBadge status={company.status} size="md" />
           </div>
-          <p className="text-sm text-slate-400 max-w-2xl">
+          <p className="text-sm text-slate-300 max-w-2xl">
             {company.description}
           </p>
-          <div className="flex items-center gap-4 mt-3 text-xs text-slate-500">
+          <div className="flex items-center gap-4 mt-3 text-xs text-slate-400">
             <span>{company.sector}</span>
             <span>•</span>
             <span>{company.country}</span>
@@ -99,13 +99,13 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
           </div>
         </div>
         <div className="text-right">
-          <p className="text-xs text-slate-500 uppercase tracking-wider">
+          <p className="text-xs text-slate-400 uppercase tracking-wider">
             Capital Deployed
           </p>
           <p className="text-lg font-semibold text-white">
             {formatCurrency(company.capitalDeployed, true)}
           </p>
-          <p className="text-xs text-slate-500">{company.financeDetail}</p>
+          <p className="text-xs text-slate-400">{company.financeDetail}</p>
         </div>
       </div>
 

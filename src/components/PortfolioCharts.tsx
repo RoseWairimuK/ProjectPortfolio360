@@ -36,7 +36,7 @@ export default function PortfolioCharts() {
 
   return (
     <div>
-      <h2 className="text-lg font-semibold text-white mb-3">
+      <h2 className="text-lg font-semibold text-slate-800 mb-3">
         Portfolio Composition
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

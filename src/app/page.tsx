@@ -5,10 +5,11 @@
  * the question: "What do I need to know right now?"
  *
  * Structure:
- * 1. Portfolio pulse KPIs (top-level numbers)
- * 2. Status breakdown (traffic lights)
- * 3. Company status table with sparklines
- * 4. Sector and capital composition charts
+ * 1. Dark header banner with title
+ * 2. Portfolio pulse KPIs (top-level numbers)
+ * 3. Status breakdown (traffic lights)
+ * 4. Company status table with sparklines
+ * 5. Sector and capital composition charts
  */
 
 import KpiCard from "@/components/KpiCard";
@@ -51,13 +52,13 @@ export default function HomePage() {
 
   return (
     <div className="space-y-6">
-      {/* ── Page Header ── */}
-      <div className="flex items-center justify-between">
+      {/* ── Dark Header Banner ── */}
+      <div className="dark-banner flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-white">
             Portfolio Command Center
           </h1>
-          <p className="text-sm text-[#7a8a6e] mt-1">
+          <p className="text-sm text-slate-400 mt-1">
             10 companies across Solar, Agriculture, Fintech, HealthTech, EdTech & WASH —
             Latest data: Q1 2026
           </p>
@@ -127,43 +128,43 @@ export default function HomePage() {
       {/* ── Status Breakdown Strip ── */}
       <div className="grid grid-cols-3 gap-4">
         <div className="card flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-emerald-400/10 flex items-center justify-center">
-            <span className="w-3 h-3 rounded-full bg-emerald-400"></span>
+          <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center">
+            <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
           </div>
           <div>
-            <p className="text-2xl font-bold text-emerald-400">
+            <p className="text-2xl font-bold text-emerald-600">
               {summary.statusBreakdown.healthy}
             </p>
-            <p className="text-xs text-slate-400">Healthy</p>
+            <p className="text-xs text-slate-500">Healthy</p>
           </div>
         </div>
         <div className="card flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-amber-400/10 flex items-center justify-center">
-            <span className="w-3 h-3 rounded-full bg-amber-400"></span>
+          <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
+            <span className="w-3 h-3 rounded-full bg-amber-500"></span>
           </div>
           <div>
-            <p className="text-2xl font-bold text-amber-400">
+            <p className="text-2xl font-bold text-amber-600">
               {summary.statusBreakdown.watch}
             </p>
-            <p className="text-xs text-slate-400">Watch</p>
+            <p className="text-xs text-slate-500">Watch</p>
           </div>
         </div>
         <div className="card flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-red-400/10 flex items-center justify-center">
-            <span className="w-3 h-3 rounded-full bg-red-400 animate-pulse"></span>
+          <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
+            <span className="w-3 h-3 rounded-full bg-red-500 animate-pulse"></span>
           </div>
           <div>
-            <p className="text-2xl font-bold text-red-400">
+            <p className="text-2xl font-bold text-red-600">
               {summary.statusBreakdown.critical}
             </p>
-            <p className="text-xs text-slate-400">Critical</p>
+            <p className="text-xs text-slate-500">Critical</p>
           </div>
         </div>
       </div>
 
       {/* ── Company Status Table ── */}
       <div>
-        <h2 className="text-lg font-semibold text-white mb-3">
+        <h2 className="text-lg font-semibold text-slate-800 mb-3">
           Portfolio Companies
         </h2>
         <CompanyTable />

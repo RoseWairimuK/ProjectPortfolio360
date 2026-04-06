@@ -41,27 +41,27 @@ export default function CashRunwayChart({
 
   return (
     <div className="card">
-      <h3 className="text-sm font-medium text-[#c8d8b8] mb-4">
+      <h3 className="text-sm font-medium text-slate-700 mb-4">
         Cash Balance & Runway
       </h3>
       <ResponsiveContainer width="100%" height={height}>
         <AreaChart data={chartData} margin={{ top: 5, right: 10, bottom: 5, left: 10 }}>
           <defs>
             <linearGradient id="cashGradientGreen" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#5D7A3E" stopOpacity={0.4} />
-              <stop offset="50%" stopColor="#2B4D2F" stopOpacity={0.15} />
-              <stop offset="100%" stopColor="#1e3a1e" stopOpacity={0} />
+              <stop offset="0%" stopColor="#5D7A3E" stopOpacity={0.3} />
+              <stop offset="50%" stopColor="#7D9A3E" stopOpacity={0.1} />
+              <stop offset="100%" stopColor="#A3B84C" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e3a1e" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis
             dataKey="period"
-            tick={{ fill: "#7a8a6e", fontSize: 10 }}
+            tick={{ fill: "#64748b", fontSize: 10 }}
             tickLine={false}
             interval={2}
           />
           <YAxis
-            tick={{ fill: "#7a8a6e", fontSize: 10 }}
+            tick={{ fill: "#64748b", fontSize: 10 }}
             tickLine={false}
             axisLine={false}
             tickFormatter={(val) => formatCurrency(val, true)}
@@ -80,11 +80,11 @@ export default function CashRunwayChart({
           />
           <Tooltip
             contentStyle={{
-              background: "#162016",
-              border: "1px solid #2B4D2F",
+              background: "#1e293b",
+              border: "1px solid #334155",
               borderRadius: "8px",
               fontSize: "12px",
-              color: "#e2e8e0",
+              color: "#e2e8f0",
             }}
             formatter={(val) => [formatCurrency(Number(val), true), "Cash Balance"]}
           />

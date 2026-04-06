@@ -36,12 +36,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex bg-[#0c120c] text-slate-200">
-        {/* Sidebar navigation */}
+      <body className="min-h-full flex bg-[#f5f6f8] text-slate-800">
+        {/* Sidebar navigation — dark forest green */}
         <Sidebar />
 
-        {/* Main content area */}
-        <main className="flex-1 ml-64 min-h-screen">
+        {/* Main content area — light/breathable background */}
+        <main className="flex-1 ml-64 min-h-screen bg-[#f5f6f8]">
           <div className="max-w-[1400px] mx-auto px-6 py-8">
             {children}
           </div>
