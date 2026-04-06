@@ -19,7 +19,7 @@ export default function CompanyQuarterlyTable({ data }: CompanyQuarterlyTablePro
   return (
     <div className="card overflow-hidden p-0">
       <div className="px-5 py-3 bg-[#03440c] border-b border-[#0a5c14]">
-        <h3 className="text-sm font-medium text-[#c8d8b8]">
+        <h3 className="text-sm font-medium text-white">
           Quarterly Performance Summary
         </h3>
       </div>

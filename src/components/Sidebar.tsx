@@ -52,20 +52,16 @@ export default function Sidebar() {
     <aside className="fixed left-0 top-0 bottom-0 w-64 bg-[#03440c] border-r border-[#0a5c14] flex flex-col z-50">
       {/* ── Logo / Brand ── */}
       <div className="px-5 py-5 border-b border-[#0a5c14]">
-        <Link href="/" className="flex items-center gap-3">
-          {/* Logo mark: orange accent on green */}
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#E8922D] to-[#F5A623] flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-orange-900/20">
-            P3
-          </div>
+        <Link href="/" className="flex items-center gap-2">
           <div>
             <h1 className="text-lg font-semibold text-white tracking-tight">
               Portfolio360
             </h1>
-            <p className="text-xs text-[#7a8a6e] uppercase tracking-widest">
+            <p className="text-xs text-[#9aaa8e] uppercase tracking-widest">
               Analytics Platform
             </p>
-            <p className="text-[11px] text-white mt-0.5">
-              Built by Rosemary Kanyoro
+            <p className="text-xs font-semibold text-white mt-0.5">
+              Demo built by Rosemary Kanyoro
             </p>
           </div>
         </Link>
@@ -73,7 +69,7 @@ export default function Sidebar() {
 
       {/* ── Main Navigation ── */}
       <nav className="px-3 py-4">
-        <p className="px-2 mb-2 text-[10px] font-medium text-[#5D7A3E] uppercase tracking-widest">
+        <p className="px-2 mb-2 text-[10px] font-medium text-white/60 uppercase tracking-widest">
           Overview
         </p>
         {navItems.map((item) => {
@@ -90,7 +86,7 @@ export default function Sidebar() {
                 "flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-sm transition-colors mb-0.5",
                 isActive
                   ? "bg-[#E8922D]/10 text-[#F5A623] font-medium"
-                  : "text-[#9aaa8e] hover:text-white hover:bg-[#0a5c14]/60"
+                  : "text-white/75 hover:text-white hover:bg-[#0a5c14]/60"
               )}
             >
               <item.icon className="w-4 h-4" />
@@ -102,7 +98,7 @@ export default function Sidebar() {
 
       {/* ── Companies List ── */}
       <div className="px-3 py-2 flex-1 overflow-y-auto">
-        <p className="px-2 mb-2 text-[10px] font-medium text-[#5D7A3E] uppercase tracking-widest">
+        <p className="px-2 mb-2 text-[10px] font-medium text-white/60 uppercase tracking-widest">
           Companies ({companies.length})
         </p>
         {companies.map((company: Company) => {
@@ -117,7 +113,7 @@ export default function Sidebar() {
                 "flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-sm transition-colors mb-0.5 group",
                 isActive
                   ? "bg-[#0a5c14] text-white"
-                  : "text-[#9aaa8e] hover:text-white hover:bg-[#0a5c14]/50"
+                  : "text-white/75 hover:text-white hover:bg-[#0a5c14]/50"
               )}
             >
               {/* RAG status indicator dot */}
@@ -136,11 +132,11 @@ export default function Sidebar() {
 
       {/* ── Footer ── */}
       <div className="px-5 py-4 border-t border-[#0a5c14]">
-        <p className="text-[10px] text-[#5D7A3E]">
+        <p className="text-[10px] text-white/50">
           Portfolio360 — Simulated Data
         </p>
-        <p className="text-[10px] text-[#5D7A3E]">
-          Built by Rosemary Kanyoro
+        <p className="text-[10px] text-white/50">
+          Demo built by Rosemary Kanyoro
         </p>
       </div>
     </aside>

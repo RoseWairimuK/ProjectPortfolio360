@@ -64,6 +64,11 @@ export default function AllocationPage() {
   const top3Capital = sortedByCapital.slice(0, 3).reduce((s, c) => s + c.capitalDeployed, 0);
   const concentrationPct = top3Capital / summary.totalCapitalDeployed;
 
+  // RAG status breakdown
+  const healthyCount = companies.filter((c) => c.status === "healthy").length;
+  const watchCount = companies.filter((c) => c.status === "watch").length;
+  const criticalCount = companies.filter((c) => c.status === "critical").length;
+
   return (
     <div className="space-y-6">
       {/* ── Dark Header Banner ── */}
@@ -78,55 +83,71 @@ export default function AllocationPage() {
       </div>
 
       {/* ── Portfolio Construction KPIs ── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="card">
-          <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+        <div className="card py-3 px-4">
+          <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">
             Portfolio Size
           </p>
-          <p className="text-2xl font-bold text-slate-800">
+          <p className="text-lg font-bold text-slate-800">
             {formatCurrency(summary.totalCapitalDeployed, true)}
           </p>
-          <p className="text-xs text-slate-400">{summary.totalCompanies} companies</p>
+          <p className="text-[10px] text-slate-400">{summary.totalCompanies} companies</p>
         </div>
-        <div className="card">
-          <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">
-            Avg Ticket Size
+        <div className="card py-3 px-4">
+          <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">
+            Avg Ticket
           </p>
-          <p className="text-2xl font-bold text-slate-800">
+          <p className="text-lg font-bold text-slate-800">
             {formatCurrency(summary.totalCapitalDeployed / summary.totalCompanies, true)}
           </p>
-          <p className="text-xs text-slate-400">per company</p>
+          <p className="text-[10px] text-slate-400">per company</p>
         </div>
-        <div className="card">
-          <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">
-            Top 3 Concentration
+        <div className="card py-3 px-4">
+          <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">
+            Top 3 Conc.
           </p>
           <p className={cn(
-            "text-2xl font-bold",
+            "text-lg font-bold",
             concentrationPct > 0.6 ? "text-amber-600" : "text-slate-800"
           )}>
             {formatPercent(concentrationPct)}
           </p>
-          <p className="text-xs text-slate-400">of total capital</p>
+          <p className="text-[10px] text-slate-400">of total capital</p>
         </div>
-        <div className="card">
-          <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">
-            High Conviction
+        <div className="card py-3 px-4">
+          <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">
+            % Healthy
           </p>
-          <p className="text-2xl font-bold text-emerald-600">
-            {companies.filter((c) => c.convictionLevel === "high").length}
+          <p className="text-lg font-bold text-emerald-600">
+            {formatPercent(healthyCount / summary.totalCompanies)}
           </p>
-          <p className="text-xs text-slate-400">
-            of {summary.totalCompanies} companies
+          <p className="text-[10px] text-slate-400">{healthyCount} companies</p>
+        </div>
+        <div className="card py-3 px-4">
+          <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">
+            % Watch
           </p>
+          <p className="text-lg font-bold text-amber-600">
+            {formatPercent(watchCount / summary.totalCompanies)}
+          </p>
+          <p className="text-[10px] text-slate-400">{watchCount} companies</p>
+        </div>
+        <div className="card py-3 px-4">
+          <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-1">
+            % Critical
+          </p>
+          <p className="text-lg font-bold text-red-600">
+            {formatPercent(criticalCount / summary.totalCompanies)}
+          </p>
+          <p className="text-[10px] text-slate-400">{criticalCount} companies</p>
         </div>
       </div>
 
       {/* ── Conviction Ranking Table ── */}
       <div className="card overflow-hidden p-0">
         <div className="px-5 py-3 bg-[#03440c] border-b border-[#0a5c14] flex items-center gap-2">
-          <Target className="w-4 h-4 text-[#9aaa8e]" />
-          <h3 className="text-sm font-medium text-[#c8d8b8]">
+          <Target className="w-4 h-4 text-white" />
+          <h3 className="text-sm font-medium text-white">
             Conviction Ranking & Allocation View
           </h3>
         </div>
