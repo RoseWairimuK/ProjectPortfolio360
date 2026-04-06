@@ -126,32 +126,26 @@ export default function HomePage() {
 
       {/* ── Status Breakdown Strip ── */}
       <div className="grid grid-cols-3 gap-4">
-        <div className="card flex items-center gap-3" style={{padding: '0.625rem 1rem'}}>
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
-          <div>
-            <p className="text-lg font-bold text-emerald-600 leading-tight">
-              {summary.statusBreakdown.healthy}
-            </p>
-            <p className="text-xs text-slate-500">Healthy</p>
+        <div className="card flex flex-col items-center justify-center gap-1" style={{padding: '0.75rem 1rem'}}>
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
+            <span className="text-2xl font-bold text-emerald-600">{summary.statusBreakdown.healthy}</span>
           </div>
+          <span className="text-sm text-slate-500">Healthy</span>
         </div>
-        <div className="card flex items-center gap-3" style={{padding: '0.625rem 1rem'}}>
-          <span className="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0"></span>
-          <div>
-            <p className="text-lg font-bold text-amber-600 leading-tight">
-              {summary.statusBreakdown.watch}
-            </p>
-            <p className="text-xs text-slate-500">Watch</p>
+        <div className="card flex flex-col items-center justify-center gap-1" style={{padding: '0.75rem 1rem'}}>
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0"></span>
+            <span className="text-2xl font-bold text-amber-600">{summary.statusBreakdown.watch}</span>
           </div>
+          <span className="text-sm text-slate-500">Watch</span>
         </div>
-        <div className="card flex items-center gap-3" style={{padding: '0.625rem 1rem'}}>
-          <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse flex-shrink-0"></span>
-          <div>
-            <p className="text-lg font-bold text-red-600 leading-tight">
-              {summary.statusBreakdown.critical}
-            </p>
-            <p className="text-xs text-slate-500">Critical</p>
+        <div className="card flex flex-col items-center justify-center gap-1" style={{padding: '0.75rem 1rem'}}>
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse flex-shrink-0"></span>
+            <span className="text-2xl font-bold text-red-600">{summary.statusBreakdown.critical}</span>
           </div>
+          <span className="text-sm text-slate-500">Critical</span>
         </div>
       </div>
 
