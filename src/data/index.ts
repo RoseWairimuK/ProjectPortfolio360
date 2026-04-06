@@ -332,7 +332,7 @@ function generateAlertMessage(
           ? `${value.toFixed(1)} months`
           : `${value.toFixed(2)}`;
 
-  return `${companyName}: ${threshold.label} at ${formatted} — ${severity.toLowerCase()} threshold breached`;
+  return `${companyName}: ${threshold.label} at ${formatted} - ${severity.toLowerCase()} threshold breached`;
 }
 
 /** Generate investment-relevant suggested action */
@@ -344,10 +344,10 @@ function generateSuggestedAction(
   const actions: Record<string, string[]> = {
     runway: [
       "Review cash forecast and identify near-term levers to extend runway",
-      "Initiate bridge financing discussion immediately — runway critically low",
+      "Initiate bridge financing discussion immediately -runway critically low",
     ],
     grossMargin: [
-      "Analyse margin drivers — pricing pressure vs cost inflation. Request management commentary",
+      "Analyse margin drivers -pricing pressure vs cost inflation. Request management commentary",
       "Urgent margin review needed. Assess whether business model is fundamentally viable at current scale",
     ],
     ebitdaMargin: [
@@ -356,7 +356,7 @@ function generateSuggestedAction(
     ],
     revenueGrowthQoQ: [
       "Request pipeline and customer acquisition data. Assess whether slowdown is seasonal or structural",
-      "Revenue declining — investigate root cause. Consider strategic review of go-to-market",
+      "Revenue declining -investigate root cause. Consider strategic review of go-to-market",
     ],
     dscr: [
       "Monitor debt service capacity closely. Review covenant compliance with lender",
@@ -372,7 +372,7 @@ function generateSuggestedAction(
     ],
     burnRate: [
       "Review spending trajectory. Ensure burn aligns with growth milestones",
-      "Burn accelerating — requires immediate management attention and spending controls",
+      "Burn accelerating -requires immediate management attention and spending controls",
     ],
   };
 

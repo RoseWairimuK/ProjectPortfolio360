@@ -1,7 +1,7 @@
 /**
  * thresholds.ts
  *
- * Portfolio alert thresholds — the rules that determine when a metric
+ * Portfolio alert thresholds -the rules that determine when a metric
  * moves from "fine" to "watch" to "critical".
  *
  * These are investment-relevant thresholds, not generic data alerts.
@@ -45,7 +45,7 @@ const thresholds: Threshold[] = [
     criticalLevel: -0.30,
     direction: "below",
     unit: "%",
-    description: "EBITDA as percentage of revenue — proxy for operational sustainability",
+    description: "EBITDA as percentage of revenue -proxy for operational sustainability",
   },
   {
     metric: "revenueGrowthQoQ",
@@ -63,7 +63,7 @@ const thresholds: Threshold[] = [
     criticalLevel: 1.2,
     direction: "below",
     unit: "x",
-    description: "EBITDA divided by total debt service — measures ability to service debt",
+    description: "EBITDA divided by total debt service -measures ability to service debt",
   },
   {
     metric: "par30",
@@ -72,7 +72,7 @@ const thresholds: Threshold[] = [
     criticalLevel: 0.10,
     direction: "above",
     unit: "%",
-    description: "Portfolio at risk — loans overdue more than 30 days",
+    description: "Portfolio at risk -loans overdue more than 30 days",
   },
   {
     metric: "collectionRate",

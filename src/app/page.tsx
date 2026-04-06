@@ -59,8 +59,7 @@ export default function HomePage() {
             Portfolio Command Center
           </h1>
           <p className="text-sm text-slate-400 mt-1">
-            10 companies across Solar, Agriculture, Fintech, HealthTech, EdTech & WASH —
-            Latest data: Q1 2026
+            10 demo companies across Solar, Agriculture, Fintech, HealthTech, EdTech & WASH sectors - Latest data: Q1 2026
           </p>
         </div>
         <div className="text-right">
@@ -127,34 +126,28 @@ export default function HomePage() {
 
       {/* ── Status Breakdown Strip ── */}
       <div className="grid grid-cols-3 gap-4">
-        <div className="card flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center">
-            <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
-          </div>
+        <div className="card flex items-center gap-3" style={{padding: '0.625rem 1rem'}}>
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
           <div>
-            <p className="text-2xl font-bold text-emerald-600">
+            <p className="text-lg font-bold text-emerald-600 leading-tight">
               {summary.statusBreakdown.healthy}
             </p>
             <p className="text-xs text-slate-500">Healthy</p>
           </div>
         </div>
-        <div className="card flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
-            <span className="w-3 h-3 rounded-full bg-amber-500"></span>
-          </div>
+        <div className="card flex items-center gap-3" style={{padding: '0.625rem 1rem'}}>
+          <span className="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0"></span>
           <div>
-            <p className="text-2xl font-bold text-amber-600">
+            <p className="text-lg font-bold text-amber-600 leading-tight">
               {summary.statusBreakdown.watch}
             </p>
             <p className="text-xs text-slate-500">Watch</p>
           </div>
         </div>
-        <div className="card flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
-            <span className="w-3 h-3 rounded-full bg-red-500 animate-pulse"></span>
-          </div>
+        <div className="card flex items-center gap-3" style={{padding: '0.625rem 1rem'}}>
+          <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse flex-shrink-0"></span>
           <div>
-            <p className="text-2xl font-bold text-red-600">
+            <p className="text-lg font-bold text-red-600 leading-tight">
               {summary.statusBreakdown.critical}
             </p>
             <p className="text-xs text-slate-500">Critical</p>

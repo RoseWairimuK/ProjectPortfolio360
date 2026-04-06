@@ -133,7 +133,7 @@ export default function Sidebar() {
       {/* ── Footer ── */}
       <div className="px-5 py-4 border-t border-[#0a5c14]">
         <p className="text-[10px] text-white/50">
-          Portfolio360 — Simulated Data
+          Portfolio360 - Simulated Data
         </p>
         <p className="text-[10px] text-white/50">
           Demo built by Rosemary Kanyoro

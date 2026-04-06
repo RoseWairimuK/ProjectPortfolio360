@@ -67,7 +67,7 @@ export default function AlertsPage() {
         <div>
           <h2 className="text-lg font-semibold text-red-600 mb-3 flex items-center gap-2">
             <AlertCircle className="w-5 h-5" />
-            Critical — Action Required
+            Critical: Action Required
           </h2>
           <div className="space-y-3">
             {criticalAlerts.map((alert) => (
@@ -82,7 +82,7 @@ export default function AlertsPage() {
         <div>
           <h2 className="text-lg font-semibold text-amber-600 mb-3 flex items-center gap-2">
             <AlertTriangle className="w-5 h-5" />
-            Watch — Monitor Closely
+            Watch: Monitor Closely
           </h2>
           <div className="space-y-3">
             {watchAlerts.map((alert) => (

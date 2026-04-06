@@ -36,7 +36,7 @@ export default function RevenueChart({ data, height = 300 }: RevenueChartProps) 
   return (
     <div className="card">
       <h3 className="text-sm font-medium text-slate-700 mb-4">
-        Revenue & EBITDA — Monthly
+        Revenue & EBITDA - Monthly
       </h3>
       <ResponsiveContainer width="100%" height={height}>
         <ComposedChart data={chartData} margin={{ top: 5, right: 10, bottom: 5, left: 10 }}>

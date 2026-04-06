@@ -1,5 +1,5 @@
 /**
- * Portfolio Allocation Page — /allocation
+ * Portfolio Allocation Page -/allocation
  *
  * This page demonstrates portfolio JUDGEMENT, not just performance.
  * It shows:
@@ -240,7 +240,7 @@ export default function AllocationPage() {
         <div className="flex items-center gap-2 mb-4">
           <TrendingUp className="w-4 h-4 text-slate-500" />
           <h3 className="text-sm font-medium text-slate-700">
-            Capital Efficiency — Revenue per Dollar Deployed (Annualised)
+            Capital Efficiency -Revenue per Dollar Deployed (Annualised)
           </h3>
         </div>
         <div className="space-y-2">
@@ -289,7 +289,7 @@ export default function AllocationPage() {
           <div className="flex items-center gap-2 mb-4">
             <Scale className="w-4 h-4 text-slate-500" />
             <h3 className="text-sm font-medium text-slate-700">
-              Attention Allocation — Where to Focus
+              Attention Allocation -Where to Focus
             </h3>
           </div>
           <div className="space-y-3">
@@ -299,7 +299,7 @@ export default function AllocationPage() {
                 Immediate Attention Required
               </p>
               <p className="text-sm text-slate-700">
-                <span className="font-medium text-slate-900">GreenBasket</span> — Margin compression and debt covenant pressure.
+                <span className="font-medium text-slate-900">GreenBasket</span> -Margin compression and debt covenant pressure.
                 Schedule management review within 2 weeks.
               </p>
             </div>
@@ -311,13 +311,13 @@ export default function AllocationPage() {
               </p>
               <div className="space-y-1.5 text-sm text-slate-700">
                 <p>
-                  <span className="font-medium text-slate-900">HarvestFin</span> — PAR30 trending up. Request credit quality deep-dive.
+                  <span className="font-medium text-slate-900">HarvestFin</span> -PAR30 trending up. Request credit quality deep-dive.
                 </p>
                 <p>
-                  <span className="font-medium text-slate-900">SunGrid</span> — Collection rates weakening. Investigate root cause.
+                  <span className="font-medium text-slate-900">SunGrid</span> -Collection rates weakening. Investigate root cause.
                 </p>
                 <p>
-                  <span className="font-medium text-slate-900">MediRoute</span> — Conv note maturity approaching. Plan for next round.
+                  <span className="font-medium text-slate-900">MediRoute</span> -Conv note maturity approaching. Plan for next round.
                 </p>
               </div>
             </div>
@@ -329,13 +329,13 @@ export default function AllocationPage() {
               </p>
               <div className="space-y-1.5 text-sm text-slate-700">
                 <p>
-                  <span className="font-medium text-slate-900">PaySwift</span> — Strongest performer. Support Series B preparation.
+                  <span className="font-medium text-slate-900">PaySwift</span> -Strongest performer. Support Series B preparation.
                 </p>
                 <p>
-                  <span className="font-medium text-slate-900">BrightStore</span> — Explore facility upsize to accelerate growth.
+                  <span className="font-medium text-slate-900">BrightStore</span> -Explore facility upsize to accelerate growth.
                 </p>
                 <p>
-                  <span className="font-medium text-slate-900">KijaniCold</span> — Approaching Series A readiness. Strong unit economics.
+                  <span className="font-medium text-slate-900">KijaniCold</span> -Approaching Series A readiness. Strong unit economics.
                 </p>
               </div>
             </div>

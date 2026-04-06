@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio360 — Portfolio Analytics",
+  title: "Portfolio360 - Portfolio Analytics",
   description:
     "A portfolio intelligence platform demonstrating investment-grade analytics across 10 emerging market companies.",
 };
