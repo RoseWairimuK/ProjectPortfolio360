@@ -26,8 +26,8 @@
   --warning: #f59e0b;
   --danger: #ef4444;
   --muted: #64748b;
-  --sidebar-bg: #0e1a10;
-  --header-bg: #111a14;
+  --sidebar-bg: #03440c;
+  --header-bg: #03440c;
 }
 
 @theme inline {
@@ -79,7 +79,7 @@ body {
 
 /* Dark banner/header section used for page titles */
 .dark-banner {
-  background: #111a14;
+  background: #03440c;
   border-radius: 0.75rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;

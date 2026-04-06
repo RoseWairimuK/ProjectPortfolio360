@@ -32,7 +32,7 @@ interface PortfolioDonutProps {
 
 /* Brand palette: green-to-orange gradient for chart segments */
 const DEFAULT_COLORS = [
-  "#2B4D2F", // dark forest green
+  "#03440c", // dark forest green
   "#5D7A3E", // olive green
   "#7D9A3E", // leaf green
   "#A3B84C", // yellow-green

@@ -49,9 +49,9 @@ export default function Sidebar() {
   const companies = getCompanies();
 
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-64 bg-[#0e1a10] border-r border-[#1e3a1e] flex flex-col z-50">
+    <aside className="fixed left-0 top-0 bottom-0 w-64 bg-[#03440c] border-r border-[#0a5c14] flex flex-col z-50">
       {/* ── Logo / Brand ── */}
-      <div className="px-5 py-5 border-b border-[#1e3a1e]">
+      <div className="px-5 py-5 border-b border-[#0a5c14]">
         <Link href="/" className="flex items-center gap-3">
           {/* Logo mark: orange accent on green */}
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#E8922D] to-[#F5A623] flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-orange-900/20">
@@ -90,7 +90,7 @@ export default function Sidebar() {
                 "flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-sm transition-colors mb-0.5",
                 isActive
                   ? "bg-[#E8922D]/10 text-[#F5A623] font-medium"
-                  : "text-[#9aaa8e] hover:text-white hover:bg-[#1e3a1e]/60"
+                  : "text-[#9aaa8e] hover:text-white hover:bg-[#0a5c14]/60"
               )}
             >
               <item.icon className="w-4 h-4" />
@@ -116,8 +116,8 @@ export default function Sidebar() {
               className={cn(
                 "flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-sm transition-colors mb-0.5 group",
                 isActive
-                  ? "bg-[#1e3a1e] text-white"
-                  : "text-[#9aaa8e] hover:text-white hover:bg-[#1e3a1e]/50"
+                  ? "bg-[#0a5c14] text-white"
+                  : "text-[#9aaa8e] hover:text-white hover:bg-[#0a5c14]/50"
               )}
             >
               {/* RAG status indicator dot */}
@@ -135,7 +135,7 @@ export default function Sidebar() {
       </div>
 
       {/* ── Footer ── */}
-      <div className="px-5 py-4 border-t border-[#1e3a1e]">
+      <div className="px-5 py-4 border-t border-[#0a5c14]">
         <p className="text-[10px] text-[#5D7A3E]">
           Portfolio360 — Simulated Data
         </p>

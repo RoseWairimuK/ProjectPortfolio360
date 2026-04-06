@@ -18,7 +18,7 @@ interface CompanyQuarterlyTableProps {
 export default function CompanyQuarterlyTable({ data }: CompanyQuarterlyTableProps) {
   return (
     <div className="card overflow-hidden p-0">
-      <div className="px-5 py-3 bg-[#162016] border-b border-[#1e3a1e]">
+      <div className="px-5 py-3 bg-[#03440c] border-b border-[#0a5c14]">
         <h3 className="text-sm font-medium text-[#c8d8b8]">
           Quarterly Performance Summary
         </h3>
@@ -58,7 +58,7 @@ export default function CompanyQuarterlyTable({ data }: CompanyQuarterlyTablePro
                   <td className="px-4 py-2.5 font-medium text-slate-800">
                     {q.period}
                   </td>
-                  <td className="px-4 py-2.5 text-right text-white">
+                  <td className="px-4 py-2.5 text-right text-slate-800 font-medium">
                     {formatCurrency(q.revenue, true)}
                   </td>
                   <td className="px-4 py-2.5 text-right">

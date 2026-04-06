@@ -124,7 +124,7 @@ export default function AllocationPage() {
 
       {/* ── Conviction Ranking Table ── */}
       <div className="card overflow-hidden p-0">
-        <div className="px-5 py-3 bg-[#162016] border-b border-[#1e3a1e] flex items-center gap-2">
+        <div className="px-5 py-3 bg-[#03440c] border-b border-[#0a5c14] flex items-center gap-2">
           <Target className="w-4 h-4 text-[#9aaa8e]" />
           <h3 className="text-sm font-medium text-[#c8d8b8]">
             Conviction Ranking & Allocation View

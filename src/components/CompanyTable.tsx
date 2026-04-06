@@ -36,7 +36,7 @@ export default function CompanyTable() {
   return (
     <div className="card overflow-hidden p-0">
       {/* Table header — dark green accent strip */}
-      <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_120px_40px] gap-2 px-5 py-3 bg-[#162016] border-b border-[#1e3a1e] text-[10px] font-medium text-[#9aaa8e] uppercase tracking-wider">
+      <div className="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr_120px_40px] gap-2 px-5 py-3 bg-[#03440c] border-b border-[#0a5c14] text-[10px] font-medium text-[#b8d4b0] uppercase tracking-wider">
         <span>Company</span>
         <span>Status</span>
         <span className="text-right">Revenue (QTR)</span>
