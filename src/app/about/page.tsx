@@ -24,10 +24,10 @@ export default function AboutPage() {
       {/* ── Dark Header Banner ── */}
       <div className="dark-banner">
         <h1 className="text-2xl font-bold text-white">
-          About Portfolio360
+          About PortfolioView360
         </h1>
         <p className="text-sm text-slate-300 mt-2 leading-relaxed max-w-3xl">
-          Portfolio360 is a portfolio intelligence platform that I designed to show how
+          PortfolioView360 is a portfolio intelligence platform that I designed to show how
           investment analysis and data science can be combined to create
           real-time portfolio monitoring, early warning systems and
           decision support tools for managing portfolios.
@@ -76,7 +76,7 @@ export default function AboutPage() {
             {
               icon: <BarChart3 className="w-5 h-5 text-[#5D7A3E]" />,
               title: "Consolidated Visibility",
-              desc: "See all portfolio companies in one view: revenue trends, margins, cash positions, and status indicators updated in real time.",
+              desc: "See all portfolio companies in one view: revenue trends, margins, cash positions and status indicators updated in real time.",
             },
             {
               icon: <AlertTriangle className="w-5 h-5 text-[#E8922D]" />,
@@ -206,9 +206,8 @@ export default function AboutPage() {
       {/* ── Disclaimer ── */}
       <div className="rounded-lg bg-slate-50 border border-slate-200 px-5 py-4">
         <p className="text-xs text-slate-400 leading-relaxed">
-          <strong className="text-slate-500">Disclaimer:</strong> All company names, financial data,
-          and metrics shown on this site are entirely fictional and created for demonstration
-          purposes only. No real companies, investments, or financial data are represented.
+          <strong className="text-slate-500">Disclaimer:</strong> All company names, financial data and metrics shown on this site are entirely fictional and created for demonstration
+          purposes only. No real companies, investments or financial data are represented.
           This is a portfolio analytics capability showcase, not investment advice.
         </p>
       </div>

@@ -246,7 +246,7 @@ const companies: Company[] = [
     sectorCategory: "edtech",
     stage: "Early Growth",
     status: "healthy",
-    description: "Online and hybrid vocational training platform in Senegal, offering certified courses in tech, trades, and agribusiness with employer placement partnerships.",
+    description: "Online and hybrid vocational training platform in Senegal, offering certified courses in tech, trades and agribusiness with employer placement partnerships.",
     businessModel: "Course fees + employer placement commissions",
     financeType: "blended",
     financeDetail: "Equity $400K + concessional loan $200K from social enterprise fund",

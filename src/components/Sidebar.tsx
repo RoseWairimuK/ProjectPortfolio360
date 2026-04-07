@@ -55,7 +55,7 @@ export default function Sidebar() {
         <Link href="/" className="flex items-center gap-2">
           <div>
             <h1 className="text-lg font-semibold text-white tracking-tight">
-              Portfolio360
+              PortfolioView360
             </h1>
             <p className="text-xs text-[#9aaa8e] uppercase tracking-widest">
               Analytics Platform
@@ -133,7 +133,7 @@ export default function Sidebar() {
       {/* ── Footer ── */}
       <div className="px-5 py-4 border-t border-[#0a5c14]">
         <p className="text-[10px] text-white/50">
-          Portfolio360 - Simulated Data
+          PortfolioView360 - Simulated Data
         </p>
         <p className="text-[10px] text-white/50">
           Demo built by Rosemary Kanyoro

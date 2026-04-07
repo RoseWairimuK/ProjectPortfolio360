@@ -1,5 +1,5 @@
 /**
- * Root layout for Portfolio360.
+ * Root layout for PortfolioView360.
  *
  * Sets up the global font, dark background, and shared navigation sidebar.
  * All pages render inside this shell.
@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio360 - Portfolio Analytics",
+  title: "PortfolioView360 - Portfolio Analytics",
   description:
     "A portfolio intelligence platform demonstrating investment-grade analytics across 10 emerging market companies.",
 };
