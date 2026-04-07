@@ -77,7 +77,7 @@ export default function AllocationPage() {
           Portfolio Allocation & Judgement
         </h1>
         <p className="text-sm text-slate-400 mt-1">
-          Capital allocation analysis, conviction ranking, and portfolio construction metrics.
+          Capital allocation analysis, conviction ranking and portfolio construction metrics.
           This view answers: where should the next dollar or hour of attention go?
         </p>
       </div>
