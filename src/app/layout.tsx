@@ -7,6 +7,7 @@
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 
@@ -41,11 +42,12 @@ export default function RootLayout({
         <Sidebar />
 
         {/* Main content area — light/breathable background */}
-        <main className="flex-1 ml-64 min-h-screen bg-[#f5f6f8]">
-          <div className="max-w-[1400px] mx-auto px-6 py-8">
+        <main className="flex-1 md:ml-64 ml-0 min-h-screen bg-[#f5f6f8]">
+          <div className="max-w-[1400px] mx-auto px-4 md:px-6 py-4 md:py-8 pt-16 md:pt-8">
             {children}
           </div>
         </main>
+        <Analytics />
       </body>
     </html>
   );

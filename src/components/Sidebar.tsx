@@ -1,15 +1,15 @@
 /**
  * Sidebar.tsx
  *
- * Fixed left sidebar navigation with forest-green branding.
- * Shows: logo, main nav links, company list, and footer.
- *
- * Design: Dark forest green sidebar, orange accent for active states.
- * RAG status dots on company list (Red/Amber/Green).
+ * Responsive sidebar navigation with forest-green branding.
+ * Desktop: fixed left sidebar always visible.
+ * Mobile: hidden by default, slides in via hamburger menu.
+ * Safari-safe: uses -webkit-overflow-scrolling and transform for smooth behaviour.
  */
 
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -18,6 +18,8 @@ import {
   PieChart,
   Info,
   ChevronRight,
+  Menu,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getCompanies, Company } from "@/data";
@@ -36,7 +38,6 @@ function statusDot(status: string) {
   }
 }
 
-/** Main navigation items — About first under Overview */
 const navItems = [
   { href: "/about", label: "About", icon: Info },
   { href: "/", label: "Command Center", icon: LayoutDashboard },
@@ -47,11 +48,27 @@ const navItems = [
 export default function Sidebar() {
   const pathname = usePathname();
   const companies = getCompanies();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  return (
-    <aside className="fixed left-0 top-0 bottom-0 w-64 bg-[#03440c] border-r border-[#0a5c14] flex flex-col z-50">
-      {/* ── Logo / Brand ── */}
-      <div className="px-5 py-5 border-b border-[#0a5c14]">
+  // Close mobile sidebar on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when mobile sidebar is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  const sidebarContent = (
+    <>
+      {/* Logo / Brand */}
+      <div className="px-5 py-5 border-b border-[#0a5c14] flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div>
             <h1 className="text-lg font-semibold text-white tracking-tight">
@@ -65,9 +82,17 @@ export default function Sidebar() {
             </p>
           </div>
         </Link>
+        {/* Close button - mobile only */}
+        <button
+          onClick={() => setMobileOpen(false)}
+          className="md:hidden text-white/70 hover:text-white p-1"
+          aria-label="Close menu"
+        >
+          <X className="w-5 h-5" />
+        </button>
       </div>
 
-      {/* ── Main Navigation ── */}
+      {/* Main Navigation */}
       <nav className="px-3 py-4">
         <p className="px-2 mb-2 text-[10px] font-medium text-white/60 uppercase tracking-widest">
           Overview
@@ -96,8 +121,11 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* ── Companies List ── */}
-      <div className="px-3 py-2 flex-1 overflow-y-auto">
+      {/* Companies List */}
+      <div
+        className="px-3 py-2 flex-1 overflow-y-auto"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         <p className="px-2 mb-2 text-[10px] font-medium text-white/60 uppercase tracking-widest">
           Companies ({companies.length})
         </p>
@@ -116,7 +144,6 @@ export default function Sidebar() {
                   : "text-white/75 hover:text-white hover:bg-[#0a5c14]/50"
               )}
             >
-              {/* RAG status indicator dot */}
               <span
                 className={cn(
                   "w-2 h-2 rounded-full flex-shrink-0",
@@ -130,7 +157,7 @@ export default function Sidebar() {
         })}
       </div>
 
-      {/* ── Footer ── */}
+      {/* Footer */}
       <div className="px-5 py-4 border-t border-[#0a5c14]">
         <p className="text-[10px] text-white/50">
           PortfolioView360 - Simulated Data
@@ -139,6 +166,43 @@ export default function Sidebar() {
           Demo built by Rosemary Kanyoro
         </p>
       </div>
-    </aside>
+    </>
+  );
+
+  return (
+    <>
+      {/* Mobile top bar with hamburger */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-40 bg-[#03440c] px-4 py-3 flex items-center gap-3">
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="text-white p-1"
+          aria-label="Open menu"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
+        <span className="text-sm font-semibold text-white">PortfolioView360</span>
+      </div>
+
+      {/* Backdrop overlay - mobile only */}
+      {mobileOpen && (
+        <div
+          className="md:hidden fixed inset-0 bg-black/50 z-40"
+          onClick={() => setMobileOpen(false)}
+        />
+      )}
+
+      {/* Sidebar panel */}
+      <aside
+        className={cn(
+          "fixed top-0 bottom-0 left-0 w-64 bg-[#03440c] border-r border-[#0a5c14] flex flex-col z-50",
+          "transition-transform duration-300 ease-in-out",
+          // Desktop: always visible. Mobile: slide in/out.
+          "md:translate-x-0",
+          mobileOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        )}
+      >
+        {sidebarContent}
+      </aside>
+    </>
   );
 }
