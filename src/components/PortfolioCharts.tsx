@@ -39,22 +39,24 @@ export default function PortfolioCharts() {
       <h2 className="text-lg font-semibold text-slate-800 mb-3">
         Portfolio Composition
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
         <PortfolioDonut
           title="Sector Exposure"
           data={sectorData}
           colors={["#f59e0b", "#10b981", "#3b82f6", "#8b5cf6", "#ec4899", "#06b6d4"]}
-          height={420}
+          height={300}
         />
         <PortfolioDonut
           title="Finance Type"
           data={financeData}
           colors={["#3b82f6", "#f59e0b", "#8b5cf6"]}
+          height={300}
         />
         <PortfolioDonut
           title="Capital Structure"
           data={capitalData}
           colors={["#3b82f6", "#ef4444", "#10b981"]}
+          height={300}
         />
       </div>
     </div>
