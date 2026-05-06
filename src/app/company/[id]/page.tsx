@@ -167,9 +167,9 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
           />
         ) : (
           <KpiCard
-            label="Conviction"
-            value={company.convictionLevel.toUpperCase()}
-            subtext={company.convictionLevel === "high" ? "Strong outlook" : company.convictionLevel === "medium" ? "Monitor closely" : "Under review"}
+            label="Risk Level"
+            value={company.riskLevel.toUpperCase()}
+            subtext={company.riskLevel === "low" ? "Strong outlook" : company.riskLevel === "medium" ? "Monitor closely" : "Requires attention"}
             icon={<Shield className="w-4 h-4" />}
           />
         )}

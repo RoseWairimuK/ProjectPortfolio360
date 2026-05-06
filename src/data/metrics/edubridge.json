@@ -594,6 +594,28 @@
       "debtOutstanding": 110000,
       "debtService": 3806,
       "dscr": 0.22
+    },
+    {
+      "period": "2026-04",
+      "revenue": 8800,
+      "grossProfit": 5940,
+      "grossMargin": 0.675,
+      "ebitda": 690,
+      "ebitdaMargin": 0.078,
+      "netIncome": 90,
+      "cashBalance": 438000,
+      "burnRate": -3130,
+      "runway": 139.9,
+      "activeStudents": 572,
+      "newEnrollments": 62,
+      "graduates": 55,
+      "completionRate": 0.791,
+      "placementRate": 0.612,
+      "revenuePerStudent": 15,
+      "capex": 0,
+      "debtOutstanding": 106500,
+      "debtService": 3806,
+      "dscr": 0.18
     }
   ],
   "quarterly": [

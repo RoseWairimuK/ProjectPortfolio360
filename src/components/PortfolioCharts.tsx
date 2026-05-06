@@ -44,6 +44,7 @@ export default function PortfolioCharts() {
           title="Sector Exposure"
           data={sectorData}
           colors={["#f59e0b", "#10b981", "#3b82f6", "#8b5cf6", "#ec4899", "#06b6d4"]}
+          height={340}
         />
         <PortfolioDonut
           title="Finance Type"

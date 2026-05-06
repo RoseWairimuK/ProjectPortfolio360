@@ -19,7 +19,7 @@
 
 export type CompanyStatus = "healthy" | "watch" | "critical";
 export type FinanceType = "equity" | "debt" | "blended";
-export type ConvictionLevel = "high" | "medium" | "low";
+export type RiskLevel = "low" | "medium" | "high";
 
 export interface Company {
   id: string;
@@ -39,8 +39,8 @@ export interface Company {
   currency: "USD";
   country: string;
   foundedYear: number;
-  convictionLevel: ConvictionLevel;
-  convictionRationale: string;
+  riskLevel: RiskLevel;
+  riskRationale: string;
   keyMetricLabel: string;          // the primary business-specific KPI label
   keyMetricUnit: string;           // e.g. "units", "%", "USD"
 }
@@ -65,8 +65,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Kenya",
     foundedYear: 2022,
-    convictionLevel: "high",
-    convictionRationale: "Strong unit economics improving QoQ, clear path to EBITDA breakeven, seasonal demand well-understood",
+    riskLevel: "low",
+    riskRationale: "Strong unit economics improving QoQ, clear path to EBITDA breakeven, seasonal demand well-understood. Churn improving in April.",
     keyMetricLabel: "Units Deployed",
     keyMetricUnit: "units",
   },
@@ -88,8 +88,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Kenya",
     foundedYear: 2021,
-    convictionLevel: "medium",
-    convictionRationale: "Solid asset base but tariff collections weakening in Q4-25, grant runway provides buffer but commercial sustainability not yet proven",
+    riskLevel: "medium",
+    riskRationale: "Solid asset base but tariff collections still below target at 87%. Grant runway provides buffer but commercial sustainability not yet proven.",
     keyMetricLabel: "Connections",
     keyMetricUnit: "connections",
   },
@@ -111,8 +111,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Kenya",
     foundedYear: 2020,
-    convictionLevel: "high",
-    convictionRationale: "Proven unit economics, strong repayment rates (>92%), debt service well-covered, scaling distribution network",
+    riskLevel: "low",
+    riskRationale: "Proven unit economics, repayment rates above 92%, distribution network scaling well. PAR30 ticking up to 9.4% - worth monitoring.",
     keyMetricLabel: "Active PAYG Customers",
     keyMetricUnit: "customers",
   },
@@ -136,8 +136,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Kenya",
     foundedYear: 2021,
-    convictionLevel: "medium",
-    convictionRationale: "PAR30 rising from 4% to 8% over last two quarters -manageable but trending wrong. Revenue growth strong but credit quality needs monitoring",
+    riskLevel: "medium",
+    riskRationale: "PAR30 now at 7.9% and rising for three consecutive quarters. Revenue growth solid but credit quality deterioration needs active management.",
     keyMetricLabel: "Active Loans",
     keyMetricUnit: "loans",
   },
@@ -159,8 +159,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Kenya",
     foundedYear: 2022,
-    convictionLevel: "low",
-    convictionRationale: "Gross margins compressing, working capital intensity rising, debt covenant under pressure. Needs operational turnaround or additional equity injection",
+    riskLevel: "high",
+    riskRationale: "Gross margin at 12.8%, debt covenant in breach, receivable days worsening to 58. Working capital spiral accelerating. Operational turnaround or equity injection required urgently.",
     keyMetricLabel: "MT Traded",
     keyMetricUnit: "metric tonnes",
   },
@@ -170,7 +170,7 @@ const companies: Company[] = [
     sector: "Ag / Irrigation-as-a-Service",
     sectorCategory: "agriculture",
     stage: "Pilot → Growth",
-    status: "healthy",
+    status: "watch",
     description: "Deploys solar-powered drip irrigation systems to commercial farms in Ethiopia on a service contract basis. Revenue from seasonal service fees and water metering.",
     businessModel: "Service contracts -seasonal irrigation fees + water usage charges",
     financeType: "debt",
@@ -182,8 +182,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Ethiopia",
     foundedYear: 2021,
-    convictionLevel: "high",
-    convictionRationale: "Strong DSCR (1.8x), seasonal revenue well-matched to debt service schedule, expansion pipeline of 15 farms secured",
+    riskLevel: "medium",
+    riskRationale: "DSCR has weakened from 1.8x to 0.41x during the seasonal transition in April. Revenue softening as high-demand season ends. Debt service pressure increasing - needs close monitoring.",
     keyMetricLabel: "Hectares Serviced",
     keyMetricUnit: "hectares",
   },
@@ -207,8 +207,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Kenya",
     foundedYear: 2020,
-    convictionLevel: "high",
-    convictionRationale: "Fastest revenue growth in portfolio (>80% YoY), TPV scaling rapidly, take rate stable, path to profitability clear by Q3-26",
+    riskLevel: "low",
+    riskRationale: "Fastest revenue growth in portfolio, TPV at $8.7M and scaling. Take rate stable at 1.63%, 1,268 active merchants. Path to profitability clear by Q3-26.",
     keyMetricLabel: "TPV Processed",
     keyMetricUnit: "USD",
   },
@@ -220,7 +220,7 @@ const companies: Company[] = [
     sector: "HealthTech / Last-Mile Pharma",
     sectorCategory: "healthtech",
     stage: "Growth",
-    status: "watch",
+    status: "critical",
     description: "Last-mile pharmaceutical delivery network in Nigeria, connecting pharmacies and clinics to wholesale distributors via an optimised logistics platform.",
     businessModel: "Delivery fee per consignment + subscription for priority routing",
     financeType: "blended",
@@ -232,8 +232,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Nigeria",
     foundedYear: 2021,
-    convictionLevel: "medium",
-    convictionRationale: "Revenue growth solid but cost-per-delivery not improving as expected. Convertible note maturity in Q3-26 creates near-term capital pressure",
+    riskLevel: "high",
+    riskRationale: "Convertible note of $302K matured in Q2-26 and remains unresolved. Cost-per-delivery rose to $3.08 in April. EBITDA margin declining. Refinancing discussions ongoing but outcome uncertain.",
     keyMetricLabel: "Monthly Deliveries",
     keyMetricUnit: "deliveries",
   },
@@ -245,7 +245,7 @@ const companies: Company[] = [
     sector: "EdTech / Vocational Training",
     sectorCategory: "edtech",
     stage: "Early Growth",
-    status: "healthy",
+    status: "watch",
     description: "Online and hybrid vocational training platform in Senegal, offering certified courses in tech, trades and agribusiness with employer placement partnerships.",
     businessModel: "Course fees + employer placement commissions",
     financeType: "blended",
@@ -257,8 +257,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Senegal",
     foundedYear: 2022,
-    convictionLevel: "medium",
-    convictionRationale: "Strong student growth and completion rates, placement revenue scaling but still sub-scale. Concessional debt terms favourable",
+    riskLevel: "medium",
+    riskRationale: "New enrollment slowing in Q2 inter-cohort period. DSCR at 0.18x is very thin. Placement revenue growing but not yet enough to cover debt service comfortably.",
     keyMetricLabel: "Active Students",
     keyMetricUnit: "students",
   },
@@ -282,8 +282,8 @@ const companies: Company[] = [
     currency: "USD",
     country: "Mozambique",
     foundedYear: 2021,
-    convictionLevel: "medium",
-    convictionRationale: "Kiosk-level economics solid but expansion pace slower than planned. Debt service consuming larger share of cash flow as new kiosks ramp slower",
+    riskLevel: "medium",
+    riskRationale: "Kiosk count stalled at 35 for second consecutive month. Negative DSCR and cash balance flag structural debt service risk. Expansion plan needs revisiting.",
     keyMetricLabel: "Active Kiosks",
     keyMetricUnit: "kiosks",
   },

@@ -45,7 +45,7 @@ const DEFAULT_COLORS = [
 export default function PortfolioDonut({
   data,
   title,
-  height = 260,
+  height = 300,
   colors = DEFAULT_COLORS,
   isCurrency = true,
 }: PortfolioDonutProps) {
@@ -60,8 +60,8 @@ export default function PortfolioDonut({
             data={data}
             cx="50%"
             cy="50%"
-            innerRadius={55}
-            outerRadius={85}
+            innerRadius={30}
+            outerRadius={95}
             paddingAngle={2}
             dataKey="value"
             nameKey="name"

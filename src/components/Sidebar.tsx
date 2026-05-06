@@ -150,7 +150,7 @@ export default function Sidebar() {
                   statusDot(company.status)
                 )}
               />
-              <span className="truncate flex-1 text-xs">{company.name}</span>
+              <span className="truncate flex-1 text-sm">{company.name}</span>
               <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-50 transition-opacity" />
             </Link>
           );

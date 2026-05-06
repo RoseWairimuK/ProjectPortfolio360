@@ -594,6 +594,28 @@
       "debtService": 0,
       "dscr": null,
       "grantRemaining": 400000
+    },
+    {
+      "period": "2026-04",
+      "revenue": 11850,
+      "grossProfit": 7210,
+      "grossMargin": 0.608,
+      "ebitda": 1180,
+      "ebitdaMargin": 0.1,
+      "netIncome": 320,
+      "cashBalance": 533200,
+      "burnRate": -4755,
+      "runway": 112.2,
+      "connections": 768,
+      "newConnections": 10,
+      "collectionRate": 0.87,
+      "tariffPerConnection": 16.7,
+      "kwhSold": 36900,
+      "capex": 5200,
+      "debtOutstanding": 0,
+      "debtService": 0,
+      "dscr": null,
+      "grantRemaining": 394800
     }
   ],
   "quarterly": [

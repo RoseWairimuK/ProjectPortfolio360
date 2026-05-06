@@ -648,6 +648,30 @@
       "debtOutstanding": 0,
       "debtService": 0,
       "dscr": null
+    },
+    {
+      "period": "2026-04",
+      "revenue": 51900,
+      "grossProfit": 40490,
+      "grossMargin": 0.78,
+      "ebitda": 30850,
+      "ebitdaMargin": 0.594,
+      "netIncome": 29950,
+      "cashBalance": 2142000,
+      "burnRate": 30850,
+      "runway": 99,
+      "activeLoans": 2290,
+      "newDisbursements": 340,
+      "loanBook": 1259000,
+      "par30": 0.079,
+      "defaultRate": 0.0158,
+      "avgLoanSize": 550,
+      "yieldOnBook": 0.42,
+      "provisionRate": 0.038,
+      "capex": 0,
+      "debtOutstanding": 0,
+      "debtService": 0,
+      "dscr": null
     }
   ],
   "quarterly": [

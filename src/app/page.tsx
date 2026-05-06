@@ -59,14 +59,14 @@ export default function HomePage() {
             Portfolio Command Center
           </h1>
           <p className="text-sm text-slate-400 mt-1">
-            10 demo companies across Solar, Agriculture, Fintech, HealthTech, EdTech & WASH sectors - Latest data: Q1 2026
+            10 demo companies across Solar, Agriculture, Fintech, HealthTech, EdTech & WASH sectors - Latest data: Q2 2026
           </p>
         </div>
         <div className="text-right">
           <p className="text-xs text-slate-500 uppercase tracking-wider">
             Report Period
           </p>
-          <p className="text-sm font-medium text-white">Q1 2026 (Mar 2026)</p>
+          <p className="text-sm font-medium text-white">Q2 2026 (Apr 2026)</p>
         </div>
       </div>
 

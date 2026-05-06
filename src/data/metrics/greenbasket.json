@@ -567,6 +567,27 @@
       "debtService": 8685,
       "dscr": 0.71,
       "covenantStatus": "breach"
+    },
+    {
+      "period": "2026-04",
+      "revenue": 95400,
+      "grossProfit": 12210,
+      "grossMargin": 0.128,
+      "ebitda": 5480,
+      "ebitdaMargin": 0.057,
+      "netIncome": 4100,
+      "cashBalance": 487000,
+      "burnRate": -6412,
+      "runway": 75.9,
+      "mtTraded": 213.8,
+      "pricePerMT": 383,
+      "receivableDays": 58.2,
+      "wcIntensity": 6320,
+      "capex": 0,
+      "debtOutstanding": 70000,
+      "debtService": 8685,
+      "dscr": 0.63,
+      "covenantStatus": "breach"
     }
   ],
   "quarterly": [

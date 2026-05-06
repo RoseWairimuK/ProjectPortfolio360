@@ -594,6 +594,28 @@
       "debtOutstanding": 0,
       "debtService": 0,
       "dscr": null
+    },
+    {
+      "period": "2026-04",
+      "revenue": 15820,
+      "grossProfit": 13210,
+      "grossMargin": 0.835,
+      "ebitda": 7090,
+      "ebitdaMargin": 0.448,
+      "netIncome": 6960,
+      "cashBalance": 593000,
+      "burnRate": -10477,
+      "runway": 56.6,
+      "unitsDeployed": 63,
+      "utilisation": 0.844,
+      "churnRate": 0.028,
+      "revenuePerUnit": 251,
+      "contributionMargin": 0.786,
+      "paybackMonths": 44.2,
+      "capex": 15000,
+      "debtOutstanding": 0,
+      "debtService": 0,
+      "dscr": null
     }
   ],
   "quarterly": [

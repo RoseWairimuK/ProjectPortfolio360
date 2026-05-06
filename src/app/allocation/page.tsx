@@ -35,9 +35,9 @@ export default function AllocationPage() {
   const alerts = generateAlerts();
 
   // Sort companies by conviction: high → medium → low
-  const convictionOrder = { high: 0, medium: 1, low: 2 };
+  const riskOrder = { high: 0, medium: 1, low: 2 };
   const sortedCompanies = [...companies].sort(
-    (a, b) => convictionOrder[a.convictionLevel] - convictionOrder[b.convictionLevel]
+    (a, b) => riskOrder[a.riskLevel] - riskOrder[b.riskLevel]
   );
 
   // Capital efficiency: revenue per dollar deployed (latest quarter annualised)
@@ -77,7 +77,7 @@ export default function AllocationPage() {
           Portfolio Allocation & Judgement
         </h1>
         <p className="text-sm text-slate-400 mt-1">
-          Capital allocation analysis, conviction ranking and portfolio construction metrics.
+          Capital allocation analysis, risk ranking and portfolio construction metrics.
           This view answers: where should the next dollar or hour of attention go?
         </p>
       </div>
@@ -143,12 +143,12 @@ export default function AllocationPage() {
         </div>
       </div>
 
-      {/* ── Conviction Ranking Table ── */}
+      {/* ── Risk Ranking Table ── */}
       <div className="card overflow-hidden p-0">
         <div className="px-5 py-3 bg-[#03440c] border-b border-[#0a5c14] flex items-center gap-2">
           <Target className="w-4 h-4 text-white" />
           <h3 className="text-sm font-medium text-white">
-            Conviction Ranking & Allocation View
+            Risk Ranking & Allocation View
           </h3>
         </div>
         <div className="overflow-x-auto">
@@ -158,13 +158,13 @@ export default function AllocationPage() {
                 <th className="text-left px-4 py-2.5 font-medium w-8">#</th>
                 <th className="text-left px-4 py-2.5 font-medium">Company</th>
                 <th className="text-center px-4 py-2.5 font-medium">Status</th>
-                <th className="text-center px-4 py-2.5 font-medium">Conviction</th>
+                <th className="text-center px-4 py-2.5 font-medium">Risk Level</th>
                 <th className="text-right px-4 py-2.5 font-medium">Capital</th>
                 <th className="text-right px-4 py-2.5 font-medium">% of Portfolio</th>
                 <th className="text-right px-4 py-2.5 font-medium">Rev/Capital</th>
                 <th className="text-right px-4 py-2.5 font-medium">EBITDA %</th>
                 <th className="text-right px-4 py-2.5 font-medium">Alerts</th>
-                <th className="text-left px-4 py-2.5 font-medium">Rationale</th>
+                <th className="text-left px-4 py-2.5 font-medium">Risk Rationale</th>
               </tr>
             </thead>
             <tbody>
@@ -189,17 +189,17 @@ export default function AllocationPage() {
                       <span
                         className={cn(
                           "inline-flex items-center gap-1 text-xs font-bold uppercase px-2 py-0.5 rounded",
-                          company.convictionLevel === "high"
-                            ? "text-emerald-700 bg-emerald-50"
-                            : company.convictionLevel === "medium"
+                          company.riskLevel === "high"
+                            ? "text-red-700 bg-red-50"
+                            : company.riskLevel === "medium"
                               ? "text-amber-700 bg-amber-50"
-                              : "text-red-700 bg-red-50"
+                              : "text-emerald-700 bg-emerald-50"
                         )}
                       >
-                        {company.convictionLevel === "high" && <ArrowUpRight className="w-3 h-3" />}
-                        {company.convictionLevel === "medium" && <Minus className="w-3 h-3" />}
-                        {company.convictionLevel === "low" && <ArrowDownRight className="w-3 h-3" />}
-                        {company.convictionLevel}
+                        {company.riskLevel === "high" && <ArrowUpRight className="w-3 h-3" />}
+                        {company.riskLevel === "medium" && <Minus className="w-3 h-3" />}
+                        {company.riskLevel === "low" && <ArrowDownRight className="w-3 h-3" />}
+                        {company.riskLevel}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-right text-slate-800">
@@ -225,7 +225,7 @@ export default function AllocationPage() {
                       )}
                     </td>
                     <td className="px-4 py-3 text-xs text-slate-500 max-w-[200px] truncate">
-                      {company.convictionRationale}
+                      {company.riskRationale}
                     </td>
                   </tr>
                 );

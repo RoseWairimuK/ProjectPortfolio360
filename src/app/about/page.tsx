@@ -86,7 +86,7 @@ export default function AboutPage() {
             {
               icon: <Brain className="w-5 h-5 text-[#7D9A3E]" />,
               title: "Investment Judgement Layer",
-              desc: "Go beyond dashboards to conviction ranking, capital efficiency analysis and recommended attention allocation across the portfolio.",
+              desc: "Go beyond dashboards to risk ranking, capital efficiency analysis and recommended attention allocation across the portfolio.",
             },
             {
               icon: <Target className="w-5 h-5 text-[#E8922D]" />,
@@ -190,16 +190,20 @@ export default function AboutPage() {
       <div className="card">
         <h2 className="text-lg font-semibold text-slate-800 mb-3">About Me</h2>
         <p className="text-sm text-slate-600 leading-relaxed">
-          I am passionate about both investment analysis and data advisory and I bring these two
-          disciplines together to support stronger portfolio oversight abd the companies within it.
-          With my background in investment and portfolio analysis and a Masters in Data Science &
-          Analytics, I take the time to understand the needs and performance of portfolio companies
-          and internal stakeholders, challenge assumptions and make sense of what is driving results.   
+          I work at the intersection of investment analysis, data science and systems thinking.
+          With a background in investment and portfolio analysis and a Masters in Data Science &
+          Analytics, I bring a practical, end-to-end perspective: understanding what the data
+          needs to say, building the systems that produce it and translating outputs into decisions
+          that stakeholders can act on. I am drawn to problems where manual, fragmented processes
+          are slowing down good decisions and I find real satisfaction in automating those
+          workflows and replacing them with something clean, reliable and scalable.
         </p>
         <p className="text-sm text-slate-500 mt-3 leading-relaxed">
-          The project reflects how I approach my work, helping my teams stay on top of portfolios,
-          identify where attention is needed and support companies in a more structured and 
-          proactive way. 
+          Whether the work sits in investment monitoring, business intelligence, data engineering
+          or systems analysis, the underlying question I ask is the same: what does this organisation
+          need to know, and how do we make sure the right information gets to the right people
+          at the right time? This platform is one answer to that question for a portfolio management
+          context. The same approach applies wherever decisions depend on data.
         </p>
       </div>
 

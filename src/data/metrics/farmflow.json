@@ -513,6 +513,25 @@
       "debtOutstanding": 406800,
       "debtService": 21717,
       "dscr": 0.48
+    },
+    {
+      "period": "2026-04",
+      "revenue": 21500,
+      "grossProfit": 12970,
+      "grossMargin": 0.603,
+      "ebitda": 8840,
+      "ebitdaMargin": 0.411,
+      "netIncome": 8320,
+      "cashBalance": -257000,
+      "burnRate": -12900,
+      "runway": -19.9,
+      "hectaresServiced": 522,
+      "revenuePerHectare": 41.19,
+      "seasonalDemand": "medium",
+      "capex": 0,
+      "debtOutstanding": 401600,
+      "debtService": 21717,
+      "dscr": 0.41
     }
   ],
   "quarterly": [

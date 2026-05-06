@@ -227,20 +227,20 @@ export default function CompanyInvestmentNote({
         </div>
       </div>
 
-      {/* Conviction footer */}
+      {/* Risk footer */}
       <div className="mt-4 pt-4 border-t border-slate-200 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-xs text-slate-500">Conviction Level:</span>
+          <span className="text-xs text-slate-500">Risk Level:</span>
           <span
             className={`text-xs font-bold uppercase ${
-              company.convictionLevel === "high"
-                ? "text-emerald-400"
-                : company.convictionLevel === "medium"
-                  ? "text-amber-400"
-                  : "text-red-400"
+              company.riskLevel === "high"
+                ? "text-red-600"
+                : company.riskLevel === "medium"
+                  ? "text-amber-600"
+                  : "text-emerald-600"
             }`}
           >
-            {company.convictionLevel}
+            {company.riskLevel}
           </span>
         </div>
         <span className="text-[10px] text-slate-400 italic">

@@ -594,6 +594,28 @@
       "debtOutstanding": 0,
       "debtService": 0,
       "dscr": null
+    },
+    {
+      "period": "2026-04",
+      "revenue": 138400,
+      "grossProfit": 107100,
+      "grossMargin": 0.774,
+      "ebitda": 88900,
+      "ebitdaMargin": 0.642,
+      "netIncome": 86200,
+      "cashBalance": 3901000,
+      "burnRate": 88900,
+      "runway": 99,
+      "activeMerchants": 1268,
+      "newMerchants": 72,
+      "merchantChurn": 16,
+      "tpv": 8712000,
+      "takeRate": 0.0163,
+      "tpvPerMerchant": 6871,
+      "capex": 0,
+      "debtOutstanding": 0,
+      "debtService": 0,
+      "dscr": null
     }
   ],
   "quarterly": [

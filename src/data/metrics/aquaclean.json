@@ -513,6 +513,25 @@
       "debtOutstanding": 150000,
       "debtService": 12133,
       "dscr": -0.1
+    },
+    {
+      "period": "2026-04",
+      "revenue": 1720,
+      "grossProfit": 1010,
+      "grossMargin": 0.587,
+      "ebitda": -1190,
+      "ebitdaMargin": -0.692,
+      "netIncome": -1480,
+      "cashBalance": -349000,
+      "burnRate": -13658,
+      "runway": -25.5,
+      "activeKiosks": 35,
+      "litresPerKiosk": 9828,
+      "pricePerLitre": 0.005,
+      "capex": 0,
+      "debtOutstanding": 148500,
+      "debtService": 12133,
+      "dscr": -0.1
     }
   ],
   "quarterly": [

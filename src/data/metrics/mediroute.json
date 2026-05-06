@@ -594,6 +594,28 @@
       "debtService": 2000,
       "dscr": 10.33,
       "convNoteMaturityMonths": 1
+    },
+    {
+      "period": "2026-04",
+      "revenue": 88500,
+      "grossProfit": 32030,
+      "grossMargin": 0.362,
+      "ebitda": 18360,
+      "ebitdaMargin": 0.207,
+      "netIncome": 16760,
+      "cashBalance": 1078000,
+      "burnRate": 18360,
+      "runway": 99,
+      "monthlyDeliveries": 18290,
+      "revenuePerDelivery": 4.84,
+      "costPerDelivery": 3.08,
+      "deliveryGrowthRate": 0.027,
+      "subscriptionRevPct": 0.27,
+      "capex": 0,
+      "debtOutstanding": 302000,
+      "debtService": 15000,
+      "dscr": 1.22,
+      "convNoteMaturityMonths": 0
     }
   ],
   "quarterly": [
