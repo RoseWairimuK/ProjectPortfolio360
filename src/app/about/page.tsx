@@ -189,7 +189,7 @@ export default function AboutPage() {
       {/* ── About the Author ── */}
       <div className="card">
         <h2 className="text-lg font-semibold text-slate-800 mb-3">About Me</h2>
-        <p className="text-sm text-slate-600 leading-relaxed">
+        <p className="text-sm text-slate-700 leading-relaxed">
           I work at the intersection of investment analysis, data science and systems thinking.
           With a background in investment and portfolio analysis and a Masters in Data Science &
           Analytics, I bring a practical, end-to-end perspective: understanding what the data
@@ -198,12 +198,15 @@ export default function AboutPage() {
           are slowing down good decisions and I find real satisfaction in automating those
           workflows and replacing them with something clean, reliable and scalable.
         </p>
-        <p className="text-sm text-slate-500 mt-3 leading-relaxed">
-          Whether the work sits in investment monitoring, business intelligence, data engineering
-          or systems analysis, the underlying question I ask is the same: what does this organisation
-          need to know, and how do we make sure the right information gets to the right people
-          at the right time? This platform is one answer to that question for a portfolio management
-          context. The same approach applies wherever decisions depend on data.
+        <p className="text-sm text-slate-700 mt-3 leading-relaxed">
+          This platform reflects how I approach analytical problems: starting from what a
+          decision-maker actually needs, working backwards through the data and building something
+          that makes the answer easy to see. I commit real time to understanding the business
+          context deeply before touching any tool or system, because without that grounding the
+          most sophisticated analysis can still answer the wrong question. Whether the work sits
+          in investment monitoring, business intelligence, data engineering or systems analysis,
+          that starting point stays consistent. The tools and context evolve; the discipline of
+          asking the right question first does not.
         </p>
       </div>
 
