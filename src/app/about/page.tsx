@@ -17,9 +17,11 @@ import {
   TrendingUp,
   Clock,
 } from "lucide-react";
+import LockedOverlay from "@/components/LockedOverlay";
 
 export default function AboutPage() {
   return (
+    <LockedOverlay>
     <div className="max-w-4xl space-y-8">
       {/* ── Dark Header Banner ── */}
       <div className="dark-banner">
@@ -219,5 +221,6 @@ export default function AboutPage() {
         </p>
       </div>
     </div>
+    </LockedOverlay>
   );
 }

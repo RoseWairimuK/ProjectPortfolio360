@@ -129,32 +129,20 @@ export default function Sidebar() {
         <p className="px-2 mb-2 text-[10px] font-medium text-white/60 uppercase tracking-widest">
           Companies ({companies.length})
         </p>
-        {companies.map((company: Company) => {
-          const href = `/company/${company.id}`;
-          const isActive = pathname === href;
-
-          return (
-            <Link
-              key={company.id}
-              href={href}
+        {companies.map((company: Company) => (
+          <div
+            key={company.id}
+            className="flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-sm mb-0.5 opacity-40 cursor-not-allowed"
+          >
+            <span
               className={cn(
-                "flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-sm transition-colors mb-0.5 group",
-                isActive
-                  ? "bg-[#0a5c14] text-white"
-                  : "text-white/75 hover:text-white hover:bg-[#0a5c14]/50"
+                "w-2 h-2 rounded-full flex-shrink-0 grayscale",
+                statusDot(company.status)
               )}
-            >
-              <span
-                className={cn(
-                  "w-2 h-2 rounded-full flex-shrink-0",
-                  statusDot(company.status)
-                )}
-              />
-              <span className="truncate flex-1 text-sm">{company.name}</span>
-              <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-50 transition-opacity" />
-            </Link>
-          );
-        })}
+            />
+            <span className="truncate flex-1 text-sm text-white/60">{company.name}</span>
+          </div>
+        ))}
       </div>
 
       {/* Footer */}

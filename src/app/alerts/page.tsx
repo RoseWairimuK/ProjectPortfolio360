@@ -19,6 +19,7 @@ import {
   TrendingUp,
   Minus,
 } from "lucide-react";
+import LockedOverlay from "@/components/LockedOverlay";
 
 export default function AlertsPage() {
   const alerts = generateAlerts();
@@ -26,6 +27,7 @@ export default function AlertsPage() {
   const watchAlerts = alerts.filter((a) => a.severity === "watch");
 
   return (
+    <LockedOverlay>
     <div className="space-y-6">
       {/* ── Dark Header Banner ── */}
       <div className="dark-banner">
@@ -140,6 +142,7 @@ export default function AlertsPage() {
         </div>
       </div>
     </div>
+    </LockedOverlay>
   );
 }
 

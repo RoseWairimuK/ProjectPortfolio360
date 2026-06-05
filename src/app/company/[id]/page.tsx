@@ -36,6 +36,7 @@ import CompanyQuarterlyTable from "@/components/CompanyQuarterlyTable";
 import CompanyAlerts from "@/components/CompanyAlerts";
 import CompanyInvestmentNote from "@/components/CompanyInvestmentNote";
 import { formatCurrency, formatPercent, formatNumber } from "@/lib/utils";
+import LockedOverlay from "@/components/LockedOverlay";
 import {
   DollarSign,
   TrendingUp,
@@ -75,6 +76,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
       : null;
 
   return (
+    <LockedOverlay>
     <div className="space-y-6">
       {/* ── Company Header — dark banner ── */}
       <div className="dark-banner flex items-start justify-between">
@@ -193,6 +195,7 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
       {/* ── Investment Note ── */}
       <CompanyInvestmentNote company={company} latest={latest} />
     </div>
+    </LockedOverlay>
   );
 }
 
