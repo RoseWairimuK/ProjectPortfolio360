@@ -39,8 +39,8 @@ function statusDot(status: string) {
 }
 
 const navItems = [
-  { href: "/about", label: "About", icon: Info },
   { href: "/", label: "Command Center", icon: LayoutDashboard },
+  { href: "/about", label: "About", icon: Info },
   { href: "/alerts", label: "Alerts & Warnings", icon: AlertTriangle },
   { href: "/allocation", label: "Portfolio Allocation", icon: PieChart },
 ];

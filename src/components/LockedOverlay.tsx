@@ -40,8 +40,7 @@ export default function LockedOverlay({ children }: LockedOverlayProps) {
           </h2>
 
           <p className="text-sm text-slate-600 leading-relaxed mb-5">
-            This section is part of a live portfolio intelligence platform.
-            Reach out for a walkthrough or brainstorm.
+            Reach out to me for a chat using the link below.
           </p>
 
           <a
@@ -50,10 +49,6 @@ export default function LockedOverlay({ children }: LockedOverlayProps) {
           >
             rose@flowt.africa
           </a>
-
-          <p className="text-[11px] text-slate-400 mt-4">
-            PortfolioView360 — Demo by Rosemary Kanyoro
-          </p>
         </div>
       </div>
     </div>
