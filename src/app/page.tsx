@@ -15,6 +15,7 @@
 import KpiCard from "@/components/KpiCard";
 import CompanyTable from "@/components/CompanyTable";
 import PortfolioCharts from "@/components/PortfolioCharts";
+import LockedOverlay from "@/components/LockedOverlay";
 import {
   getPortfolioSummary,
   generateAlerts,
@@ -51,6 +52,7 @@ export default function HomePage() {
       : 0;
 
   return (
+    <LockedOverlay>
     <div className="space-y-6">
       {/* ── Dark Header Banner ── */}
       <div className="dark-banner flex items-center justify-between">
@@ -160,5 +162,6 @@ export default function HomePage() {
       {/* ── Portfolio Composition Charts ── */}
       <PortfolioCharts />
     </div>
+    </LockedOverlay>
   );
 }

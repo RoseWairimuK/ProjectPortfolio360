@@ -18,7 +18,6 @@ import {
   generateAlerts,
 } from "@/data";
 import PortfolioDonut from "@/components/charts/PortfolioDonut";
-import LockedOverlay from "@/components/LockedOverlay";
 import StatusBadge from "@/components/StatusBadge";
 import { formatCurrency, formatPercent, cn } from "@/lib/utils";
 import {
@@ -71,7 +70,7 @@ export default function AllocationPage() {
   const criticalCount = companies.filter((c) => c.status === "critical").length;
 
   return (
-    <LockedOverlay>
+    <>
     <div className="space-y-6">
       {/* ── Dark Header Banner ── */}
       <div className="dark-banner">
@@ -345,6 +344,6 @@ export default function AllocationPage() {
         </div>
       </div>
     </div>
-    </LockedOverlay>
+    </>
   );
 }
