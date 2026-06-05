@@ -40,7 +40,7 @@ export default function LockedOverlay({ children }: LockedOverlayProps) {
           </h2>
 
           <p className="text-sm text-slate-600 leading-relaxed mb-5">
-            Reach out to me for a chat using the link below.
+            Reach out to us at:
           </p>
 
           <a
